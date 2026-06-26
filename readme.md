@@ -1,10 +1,12 @@
-# CyberShield-SIEM
+#  CyberDefender-SIEM
 
 A Mini Security Information and Event Management (SIEM) Tool developed using Python.
 
 ## Project Overview
 
-CyberShield-SIEM collects security logs, parses them, stores them in a SQLite database, detects suspicious activities, and generates security alerts.
+Mini Security Information and Event Management (SIEM) Tool
+
+A Python-based cybersecurity project that collects security logs, stores them in a SQLite database, detects suspicious activities, and generates alerts. This project is being developed over 30 days as an internship portfolio project.
 
 ## Technologies Used
 
