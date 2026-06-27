@@ -30,3 +30,9 @@ def insert_log(log):
     ))
 
     conn.commit()
+
+
+# NEW FUNCTION
+def clear_logs():
+    cursor.execute("DELETE FROM logs")
+    conn.commit()

@@ -45,32 +45,39 @@ A Python-based cybersecurity project that collects security logs, stores them in
 - src/database.py
 - database/siem.db
 
----
+## Day 3
+
+### Features
+- Threat Detection Module
+- Failed Login Detection
+- Displayed Security Alerts
+
+### Files Added
+
+- src/detector.py
+
+### Output
+
+The SIEM now identifies failed login attempts from stored security logs and displays security alerts.
 
 ## Project Structure
 
-CyberShield-SIEM/
-
+CyberDefender-SIEM/
+│
 ├── database/
-
-│ └── siem.db
-
+│   └── siem.db
+│
 ├── logs/
-
-│ └── system.log
-
+│   └── system.log
+│
 ├── src/
-
-│ ├── database.py
-
-│ ├── log_collector.py
-
-│ └── parser.py
-
+│   ├── __pycache__/        (Ignored by Git using .gitignore)
+│   ├── database.py
+│   ├── detector.py
+│   ├── log_collector.py
+│   └── parser.py
+│
 ├── main.py
-
 ├── README.md
-
 ├── requirements.txt
-
 └── .gitignore
