@@ -1,9 +1,8 @@
 from src.log_collector import collect_logs
 from src.parser import parse_log
-from src.database import insert_log, clear_logs
+from src.database import insert_log
 from src.detector import detect_failed_logins
-
-clear_logs()
+from src.alert_engine import save_alert
 
 logs = collect_logs("logs/system.log")
 
@@ -17,4 +16,8 @@ for log in logs:
 
 print("\nRunning Threat Detection...\n")
 
-detect_failed_logins()
+alert = detect_failed_logins()
+
+if alert:
+    save_alert(alert)
+    print("\nAlert saved successfully!")

@@ -56,13 +56,24 @@ A Python-based cybersecurity project that collects security logs, stores them in
 
 - src/detector.py
 
-### Output
+## Day 4 – Alert Engine
 
-The SIEM now identifies failed login attempts from stored security logs and displays security alerts.
+### Features
+- Implemented Alert Engine
+- Saved security alerts into a CSV file
+- Generated alerts for failed login attempts
+
+### Technologies
+- Python
+- CSV
+- SQLite
 
 ## Project Structure
 
-CyberDefender-SIEM/
+CyberShield-SIEM/
+│
+├── alerts/
+│   └── alerts.csv
 │
 ├── database/
 │   └── siem.db
@@ -71,7 +82,7 @@ CyberDefender-SIEM/
 │   └── system.log
 │
 ├── src/
-│   ├── __pycache__/        (Ignored by Git using .gitignore)
+│   ├── alert_engine.py
 │   ├── database.py
 │   ├── detector.py
 │   ├── log_collector.py
@@ -79,5 +90,5 @@ CyberDefender-SIEM/
 │
 ├── main.py
 ├── README.md
-├── requirements.txt
+├── requirement.txt
 └── .gitignore

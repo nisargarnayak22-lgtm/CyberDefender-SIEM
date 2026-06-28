@@ -17,7 +17,7 @@ def detect_failed_logins():
 
     if not failed_logs:
         print("No failed login attempts detected.")
-        return
+        return None
 
     print("\n========== SECURITY ALERT ==========\n")
 
@@ -30,3 +30,8 @@ def detect_failed_logins():
         print("--------------------------------")
 
     print("Total Failed Logins:", len(failed_logs))
+
+    return {
+        "severity": "High",
+        "message": f"{len(failed_logs)} failed login attempts detected."
+    }
