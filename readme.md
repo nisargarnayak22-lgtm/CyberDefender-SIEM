@@ -68,27 +68,35 @@ A Python-based cybersecurity project that collects security logs, stores them in
 - CSV
 - SQLite
 
+## Day 5
+
+Implemented a SIEM Dashboard that displays:
+
+- Total Logs
+- Successful Login Attempts
+- Failed Login Attempts
+- Real-time Log Statistics
+
 ## Project Structure
 
-CyberShield-SIEM/
+CyberDefender-SIEM
 │
-├── alerts/
+├── alerts
 │   └── alerts.csv
 │
-├── database/
+├── database
 │   └── siem.db
 │
-├── logs/
-│   └── system.log
+├── logs
+│   └── sample_logs.csv
 │
-├── src/
-│   ├── alert_engine.py
+├── src
 │   ├── database.py
+│   ├── parser.py
 │   ├── detector.py
-│   ├── log_collector.py
-│   └── parser.py
+│   ├── alert_engine.py
+│   └── dashboard.py      
 │
 ├── main.py
 ├── README.md
-├── requirement.txt
-└── .gitignore
+└── requirements.txt
