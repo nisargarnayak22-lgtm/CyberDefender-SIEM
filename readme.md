@@ -77,25 +77,35 @@ Implemented a SIEM Dashboard that displays:
 - Failed Login Attempts
 - Real-time Log Statistics
 
+## Day 6 – Brute Force Attack Detection
+
+### Features
+
+- Detects repeated failed login attempts.
+- Identifies suspicious IP addresses.
+- Generates CRITICAL alerts for brute-force attacks.
+- Uses SQL GROUP BY and HAVING for attack detection.
+
 ## Project Structure
 
 CyberDefender-SIEM
 │
-├── alerts
-│   └── alerts.csv
+├── alert
+│    └── alerts.csv
 │
 ├── database
-│   └── siem.db
+│    └── siem.db
 │
 ├── logs
-│   └── sample_logs.csv
+│    └── sample_logs.csv
 │
 ├── src
-│   ├── database.py
-│   ├── parser.py
-│   ├── detector.py
-│   ├── alert_engine.py
-│   └── dashboard.py      
+│    ├── parser.py
+│    ├── database.py
+│    ├── detector.py
+│    ├── alert_engine.py
+│    ├── dashboard.py
+│    └── brute_force.py      ← NEW
 │
 ├── main.py
 ├── README.md
