@@ -104,25 +104,27 @@ Implemented a SIEM Dashboard that displays:
 
 ## Project Structure
 
-CyberDefender-SIEM
+CyberDefender-SIEM/
 │
-├── alert
-│    └── alerts.csv
+├── alert/
+│   └── alerts.csv
 │
-├── database
-│    └── siem.db
+├── database/
+│   └── siem.db
 │
-├── logs
-│    └── sample_logs.csv
+├── logs/
+│   └── sample_logs.csv
 │
-├── src
-│    ├── parser.py
-│    ├── database.py
-│    ├── detector.py
-│    ├── alert_engine.py
-│    ├── dashboard.py
-│    └── brute_force.py      ← NEW
+├── src/
+│   ├── parser.py
+│   ├── database.py
+│   ├── detector.py
+│   ├── alert_engine.py
+│   ├── dashboard.py
+│   ├── brute_force.py
+│   └── severity.py
 │
 ├── main.py
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
