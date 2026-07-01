@@ -122,7 +122,8 @@ CyberDefender-SIEM/
 │   ├── alert_engine.py
 │   ├── dashboard.py
 │   ├── brute_force.py
-│   └── severity.py
+│   ├── severity.py
+│   └── email_alert.py
 │
 ├── main.py
 ├── README.md
