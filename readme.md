@@ -86,6 +86,22 @@ Implemented a SIEM Dashboard that displays:
 - Generates CRITICAL alerts for brute-force attacks.
 - Uses SQL GROUP BY and HAVING for attack detection.
 
+## Day 7 – Log Severity Classification
+
+### Features
+- Detects failed login attempts.
+- Identifies brute-force attacks.
+- Classifies logs based on severity.
+- Displays a security dashboard.
+- Stores alerts in CSV format.
+
+### Technologies
+- Python
+- SQLite
+- CSV
+- Git
+- GitHub
+
 ## Project Structure
 
 CyberDefender-SIEM
