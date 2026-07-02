@@ -102,6 +102,13 @@ Implemented a SIEM Dashboard that displays:
 - Git
 - GitHub
 
+## ✅ Day 8 - Email Alert Notification
+
+### New Feature
+- Sends email alerts automatically when HIGH severity events are detected.
+- Uses Gmail SMTP with App Password authentication.
+- Notifies the administrator instantly.
+
 ## Project Structure
 
 CyberDefender-SIEM/

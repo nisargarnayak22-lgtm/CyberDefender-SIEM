@@ -6,6 +6,7 @@ from src.alert_engine import save_alert
 from src.dashboard import show_dashboard
 from src.brute_force import detect_brute_force
 from src.severity import classify_logs
+from src.email_alert import send_email_alert
 
 logs = collect_logs("logs/system.log")
 
@@ -24,6 +25,10 @@ alert = detect_failed_logins()
 if alert:
     save_alert(alert)
     print("\nAlert saved successfully!")
+    send_email_alert(
+    "CyberDefender-SIEM Alert",
+    "A HIGH severity alert has been detected.\n\nPlease check your SIEM Dashboard immediately."
+)
     show_dashboard()
     detect_brute_force()
     classify_logs()
