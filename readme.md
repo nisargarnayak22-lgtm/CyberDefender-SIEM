@@ -123,6 +123,18 @@ Implemented a SIEM Dashboard that displays:
 
 ---
 
+## 📧 Day 8 - Email Alert Notification
+
+### Terminal Output
+
+![Email Alert Terminal](screenshot/email_alert_terminal.png)
+
+### Email Received
+
+![Gmail Alert](screenshot/gmail_alert.png)
+
+---
+
 ## ✅ Day 9 - Flask Web Dashboard
 
 ### New Features
