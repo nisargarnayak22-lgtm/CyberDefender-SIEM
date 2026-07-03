@@ -147,7 +147,7 @@ Implemented a SIEM Dashboard that displays:
 
 ## 📸 Dashboard Screenshot
 
-![CyberDefender-SIEM Dashboard](screenshots/dashboard.png)
+![CyberDefender-SIEM Dashboard](screenshot/dashboard.png)
 
 ---
 
