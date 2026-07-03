@@ -94,6 +94,14 @@ Implemented a SIEM Dashboard that displays:
 - Generates CRITICAL alerts for brute-force attacks.
 - Uses SQL GROUP BY and HAVING for attack detection.
 
+## 🚨 Day 6 - Brute Force Attack Detection
+
+The SIEM system detects repeated failed login attempts from the same IP address and raises a **CRITICAL** brute force attack alert.
+
+### Brute Force Detection
+
+![Brute Force Detection](screenshot/brute_force_detection.png)
+
 ---
 
 ## Day 7 – Log Severity Classification
@@ -112,7 +120,6 @@ Implemented a SIEM Dashboard that displays:
 - Git
 - GitHub
 
----
 
 ## 🚨 Day 7 - Log Severity Classification
 
@@ -134,7 +141,6 @@ The SIEM system classifies security events based on their severity level.
 - Uses Gmail SMTP with App Password authentication.
 - Notifies the administrator instantly.
 
----
 
 ## 📧 Day 8 - Email Alert Notification
 
