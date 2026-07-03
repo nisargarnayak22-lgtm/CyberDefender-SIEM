@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CyberDefender-SIEM Dashboard</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f4f4f4;
+            margin:40px;
+        }
+
+        h1{
+            color:#2c3e50;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            background:#2c3e50;
+            color:white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>CyberDefender-SIEM Dashboard</h1>
+
+<h3>Statistics</h3>
+
+<p><b>Total Logs:</b> {{ total }}</p>
+
+<p><b>Successful Logins:</b> {{ success }}</p>
+
+<p><b>Failed Logins:</b> {{ failed }}</p>
+
+<h3>Log Records</h3>
+
+<table>
+
+<tr>
+
+<th>Timestamp</th>
+
+<th>Event</th>
+
+<th>User</th>
+
+<th>IP Address</th>
+
+</tr>
+
+{% for log in logs %}
+
+<tr>
+
+<td>{{ log[0] }}</td>
+
+<td>{{ log[1] }}</td>
+
+<td>{{ log[2] }}</td>
+
+<td>{{ log[3] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>
