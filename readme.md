@@ -114,6 +114,19 @@ Implemented a SIEM Dashboard that displays:
 
 ---
 
+## 🚨 Day 7 - Log Severity Classification
+
+The SIEM system classifies security events based on their severity level.
+
+- 🟢 LOW – Successful login events
+- 🔴 HIGH – Failed login events
+
+### Log Severity Classification
+
+![Log Severity Classification](screenshot/severity_classification.png)
+
+---
+
 ## ✅ Day 8 - Email Alert Notification
 
 ### New Feature
