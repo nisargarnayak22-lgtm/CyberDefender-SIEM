@@ -72,6 +72,14 @@ A Python-based cybersecurity project that collects security logs, stores them in
 - CSV
 - SQLite
 
+## 🚨 Day 4 - Alert Engine
+
+The Alert Engine analyzes security logs and generates alerts whenever suspicious activities such as multiple failed login attempts are detected.
+
+### Alert Engine Screenshot
+
+![Alert Engine](screenshot/alert_engine.png)
+
 ---
 
 ## Day 5
@@ -174,7 +182,6 @@ The SIEM system classifies security events based on their severity level.
 - HTML
 - CSS
 
----
 
 ## 📸 Dashboard Screenshot
 
