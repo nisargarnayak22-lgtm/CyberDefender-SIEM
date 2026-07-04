@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Alerts</title>
+</head>
+<body>
+
+<h1>CyberDefender-SIEM Recent Alerts</h1>
+
+<table border="1">
+
+<tr>
+<th>Time</th>
+<th>User</th>
+<th>IP</th>
+<th>Event</th>
+</tr>
+
+{% for alert in alerts %}
+
+<tr>
+<td>{{ alert[0] }}</td>
+<td>{{ alert[1] }}</td>
+<td>{{ alert[2] }}</td>
+<td>{{ alert[3] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

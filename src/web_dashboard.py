@@ -14,6 +14,7 @@ DATABASE = os.path.join(BASE_DIR, "database", "siem.db")
 
 @app.route("/")
 def dashboard():
+
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
 
@@ -30,6 +31,7 @@ def dashboard():
         SELECT timestamp, event, user, ip
         FROM logs
         ORDER BY timestamp DESC
+        LIMIT 10
     """)
 
     logs = cursor.fetchall()
@@ -41,6 +43,29 @@ def dashboard():
         success=success,
         failed=failed,
         logs=logs
+    )
+
+
+@app.route("/alerts")
+def alerts():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT timestamp, user, ip, event
+        FROM logs
+        WHERE event='LOGIN_FAILED'
+        ORDER BY timestamp DESC
+        LIMIT 10
+    """)
+
+    alerts = cursor.fetchall()
+    conn.close()
+
+    return render_template(
+        "alerts.html",
+        alerts=alerts
     )
 
 

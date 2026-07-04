@@ -189,37 +189,61 @@ The SIEM system classifies security events based on their severity level.
 
 ---
 
+## 📅 Day 10 - Recent Alerts Dashboard
+
+### 🚀 Features Added
+
+- Developed a dedicated **Recent Alerts Dashboard** using Flask.
+- Displays only the latest failed login attempts in a separate web interface.
+- Shows detailed information including **Timestamp, User, IP Address, and Event**.
+- Improved dashboard readability by displaying only the most recent records.
+- Enhanced the SIEM monitoring interface for quick analysis of suspicious login activities.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML
+- Jinja2 Templates
+- Visual Studio Code
+
+### 📸 Dashboard Overview
+
+Displays an overview of the SIEM statistics including total logs, successful logins, failed logins, and recent log records.
+
+![Dashboard Overview](screenshot/dashboard.png)
+
+### 📸 Recent Alerts Dashboard
+
+Displays the latest failed login attempts separately, making it easier to monitor suspicious activities in real time.
+
+![Recent Alerts Dashboard](screenshot/recent_alerts_dashboard.png)
+
+---
+
 ## Project Structure
 
 CyberDefender-SIEM/
 │
-├── alert/
-│   └── alerts.csv
-│
 ├── database/
 │   └── siem.db
 │
-├── logs/
-│   └── sample_logs.csv
-│
-├── screenshots/
-│   └── dashboard.png
+├── screenshot/
 │
 ├── src/
-│   ├── parser.py
-│   ├── database.py
-│   ├── detector.py
 │   ├── alert_engine.py
-│   ├── dashboard.py
 │   ├── brute_force.py
-│   ├── severity.py
+│   ├── database.py
 │   ├── email_alert.py
+│   ├── logger.py
+│   ├── severity.py
 │   └── web_dashboard.py
 │
 ├── templates/
-│   └── dashboard.html
+│   ├── dashboard.html
+│   └── alerts.html      
 │
 ├── main.py
-├── README.md
 ├── requirements.txt
-└── .gitignore
+└── README.md
