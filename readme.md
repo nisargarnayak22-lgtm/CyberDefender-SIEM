@@ -240,9 +240,12 @@ Displays the latest failed login attempts separately, making it easier to monito
 - Jinja2 Templates
 - Visual Studio Code
 
-### 📸 Search & Filter Dashboard
+### 📸 Search by Username
 
-![Search & Filter Dashboard](screenshot/search_filter_dashboard.png)
+Search logs based on a specific username to quickly locate user activities.
+
+![Search by Username](screenshot/search_by_username.png)
+
 
 ## Project Structure
 
