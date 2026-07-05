@@ -252,6 +252,12 @@ Filter logs to display only `LOGIN_SUCCESS` or `LOGIN_FAILED` events for easier 
 
 ![Filter by Event Type](screenshot/filter_login_failed.png)
 
+### 📸 Export Logs to CSV
+
+Download SIEM logs in CSV format for reporting, auditing, and further analysis.
+
+![Export Logs to CSV](screenshot/export_logs_csv.png)
+
 
 ## Project Structure
 
