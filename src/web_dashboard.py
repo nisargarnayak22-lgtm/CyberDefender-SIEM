@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, Response
 import sqlite3
 import os
+import csv
+import io
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -15,6 +17,9 @@ DATABASE = os.path.join(BASE_DIR, "database", "siem.db")
 @app.route("/")
 def dashboard():
 
+    search = request.args.get("search", "")
+    event = request.args.get("event", "")
+
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
 
@@ -27,14 +32,24 @@ def dashboard():
     cursor.execute("SELECT COUNT(*) FROM logs WHERE event='LOGIN_FAILED'")
     failed = cursor.fetchone()[0]
 
-    cursor.execute("""
+    query = """
         SELECT timestamp, event, user, ip
         FROM logs
-        ORDER BY timestamp DESC
-        LIMIT 10
-    """)
+        WHERE user LIKE ?
+    """
+
+    params = ['%' + search + '%']
+
+    if event:
+        query += " AND event=?"
+        params.append(event)
+
+    query += " ORDER BY timestamp DESC LIMIT 10"
+
+    cursor.execute(query, params)
 
     logs = cursor.fetchall()
+
     conn.close()
 
     return render_template(
@@ -42,7 +57,9 @@ def dashboard():
         total=total,
         success=success,
         failed=failed,
-        logs=logs
+        logs=logs,
+        search=search,
+        event=event
     )
 
 
@@ -61,11 +78,45 @@ def alerts():
     """)
 
     alerts = cursor.fetchall()
+
     conn.close()
 
     return render_template(
         "alerts.html",
         alerts=alerts
+    )
+
+
+@app.route("/export")
+def export():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT timestamp,event,user,ip
+        FROM logs
+        ORDER BY timestamp DESC
+    """)
+
+    rows = cursor.fetchall()
+
+    conn.close()
+
+    output = io.StringIO()
+
+    writer = csv.writer(output)
+
+    writer.writerow(["Timestamp","Event","User","IP Address"])
+
+    writer.writerows(rows)
+
+    return Response(
+        output.getvalue(),
+        mimetype="text/csv",
+        headers={
+            "Content-Disposition":"attachment;filename=siem_logs.csv"
+        }
     )
 
 

@@ -222,6 +222,28 @@ Displays the latest failed login attempts separately, making it easier to monito
 
 ---
 
+## 📅 Day 11 - Search & Filter Dashboard
+
+### 🚀 Features Added
+
+- Added search functionality to filter logs by username.
+- Added event filtering for LOGIN_SUCCESS and LOGIN_FAILED.
+- Improved dashboard usability with dynamic log filtering.
+- Displays only relevant log records based on user input.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML
+- Jinja2 Templates
+- Visual Studio Code
+
+### 📸 Search & Filter Dashboard
+
+![Search & Filter Dashboard](screenshot/search_filter_dashboard.png)
+
 ## Project Structure
 
 CyberDefender-SIEM/
