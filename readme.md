@@ -246,6 +246,12 @@ Search logs based on a specific username to quickly locate user activities.
 
 ![Search by Username](screenshot/search_by_username.png)
 
+### 📸 Filter by Event Type
+
+Filter logs to display only `LOGIN_SUCCESS` or `LOGIN_FAILED` events for easier security analysis.
+
+![Filter by Event Type](screenshot/filter_login_failed.png)
+
 
 ## Project Structure
 
