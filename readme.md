@@ -304,7 +304,9 @@ CyberDefender-SIEM/
 │   ├── recent_alerts_dashboard.png
 │   ├── search_by_username.png
 │   ├── filter_login_failed.png
-│   └── export_logs_csv.png
+│   ├── search_and_filter.png
+│   ├── export_logs_csv.png
+│   └── professional_dashboard.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -313,6 +315,10 @@ CyberDefender-SIEM/
 │   ├── email_alert.py
 │   ├── severity.py
 │   └── web_dashboard.py
+│
+├── static/
+│   └── css/
+│       └── style.css
 │
 ├── templates/
 │   ├── dashboard.html
