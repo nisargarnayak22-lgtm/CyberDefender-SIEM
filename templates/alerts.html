@@ -1,33 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Recent Alerts</title>
+
+<meta charset="UTF-8">
+
+<title>Recent Alerts</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
+
 <body>
 
-<h1>CyberDefender-SIEM Recent Alerts</h1>
+<header>
 
-<table border="1">
+<h1>🚨 Recent Security Alerts</h1>
+
+</header>
+
+<div class="container">
+
+<table>
 
 <tr>
-<th>Time</th>
+
+<th>Timestamp</th>
+
 <th>User</th>
-<th>IP</th>
+
+<th>IP Address</th>
+
 <th>Event</th>
+
 </tr>
 
 {% for alert in alerts %}
 
 <tr>
+
 <td>{{ alert[0] }}</td>
+
 <td>{{ alert[1] }}</td>
+
 <td>{{ alert[2] }}</td>
-<td>{{ alert[3] }}</td>
+
+<td>
+
+<span class="failed-text">
+
+{{ alert[3] }}
+
+</span>
+
+</td>
+
 </tr>
 
 {% endfor %}
 
 </table>
 
+<br>
+
+<a class="alerts-btn" href="/">
+
+⬅ Back to Dashboard
+
+</a>
+
+</div>
+
+<footer>
+
+CyberDefender-SIEM © 2026
+
+</footer>
+
 </body>
+
 </html>

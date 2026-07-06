@@ -8,7 +8,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 app = Flask(
     __name__,
-    template_folder=os.path.join(BASE_DIR, "templates")
+    template_folder=os.path.join(BASE_DIR, "templates"),
+    static_folder=os.path.join(BASE_DIR, "static")
 )
 
 DATABASE = os.path.join(BASE_DIR, "database", "siem.db")
@@ -94,7 +95,7 @@ def export():
     cursor = conn.cursor()
 
     cursor.execute("""
-        SELECT timestamp,event,user,ip
+        SELECT timestamp, event, user, ip
         FROM logs
         ORDER BY timestamp DESC
     """)
@@ -106,16 +107,14 @@ def export():
     output = io.StringIO()
 
     writer = csv.writer(output)
-
-    writer.writerow(["Timestamp","Event","User","IP Address"])
-
+    writer.writerow(["Timestamp", "Event", "User", "IP Address"])
     writer.writerows(rows)
 
     return Response(
         output.getvalue(),
         mimetype="text/csv",
         headers={
-            "Content-Disposition":"attachment;filename=siem_logs.csv"
+            "Content-Disposition": "attachment; filename=siem_logs.csv"
         }
     )
 

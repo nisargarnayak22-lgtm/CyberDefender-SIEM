@@ -1,112 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberDefender-SIEM Dashboard</title>
 
-<title>CyberDefender-SIEM Dashboard</title>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-<h1>CyberDefender-SIEM Dashboard</h1>
+<header>
 
-<h2>Statistics</h2>
+    <h1>🛡 CyberDefender-SIEM Dashboard</h1>
 
-<p>Total Logs : {{ total }}</p>
+</header>
 
-<p>Successful Logins : {{ success }}</p>
+<div class="container">
 
-<p>Failed Logins : {{ failed }}</p>
+    <div class="cards">
 
-<hr>
+        <div class="card total">
 
-<form method="GET">
+            <h2>Total Logs</h2>
 
-<input
-type="text"
-name="search"
-placeholder="Search Username"
-value="{{ search }}">
+            <p>{{ total }}</p>
 
-<select name="event">
+        </div>
 
-<option value="">All Events</option>
+        <div class="card success">
 
-<option value="LOGIN_SUCCESS"
-{% if event=="LOGIN_SUCCESS" %}
-selected
-{% endif %}
->
-LOGIN_SUCCESS
-</option>
+            <h2>Successful Logins</h2>
 
-<option value="LOGIN_FAILED"
-{% if event=="LOGIN_FAILED" %}
-selected
-{% endif %}
->
-LOGIN_FAILED
-</option>
+            <p>{{ success }}</p>
 
-</select>
+        </div>
 
-<input
-type="submit"
-value="Search">
+        <div class="card failed">
 
-</form>
+            <h2>Failed Logins</h2>
 
-<br>
+            <p>{{ failed }}</p>
 
-<table border="1">
+        </div>
 
-<tr>
+    </div>
 
-<th>Timestamp</th>
+    <form method="GET" class="search-form">
 
-<th>Event</th>
+        <input
+            type="text"
+            name="search"
+            placeholder="Search Username"
+            value="{{ search }}">
 
-<th>User</th>
+        <select name="event">
 
-<th>IP Address</th>
+            <option value="">All Events</option>
 
-</tr>
+            <option value="LOGIN_SUCCESS"
+            {% if event=="LOGIN_SUCCESS" %}selected{% endif %}>
+            LOGIN_SUCCESS
+            </option>
 
-{% for log in logs %}
+            <option value="LOGIN_FAILED"
+            {% if event=="LOGIN_FAILED" %}selected{% endif %}>
+            LOGIN_FAILED
+            </option>
 
-<tr>
+        </select>
 
-<td>{{ log[0] }}</td>
+        <button type="submit">🔍 Search</button>
 
-<td>{{ log[1] }}</td>
+        <a href="/export">
 
-<td>{{ log[2] }}</td>
+            <button type="button">
 
-<td>{{ log[3] }}</td>
+                📥 Export CSV
 
-</tr>
+            </button>
 
-{% endfor %}
+        </a>
 
-</table>
+    </form>
 
-<br>
-<br><br>
+    <table>
 
-<a href="/export">
+        <thead>
 
-<button>
+            <tr>
 
-Export Logs (CSV)
+                <th>Timestamp</th>
 
-</button>
+                <th>Event</th>
 
-</a>
+                <th>User</th>
 
-<br><br>
+                <th>IP Address</th>
 
-<a href="/alerts">View Recent Alerts</a>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for log in logs %}
+
+        <tr>
+
+            <td>{{ log[0] }}</td>
+
+            <td>
+
+                {% if log[1] == "LOGIN_SUCCESS" %}
+
+                    <span class="success-text">🟢 {{ log[1] }}</span>
+
+                {% else %}
+
+                    <span class="failed-text">🔴 {{ log[1] }}</span>
+
+                {% endif %}
+
+            </td>
+
+            <td>{{ log[2] }}</td>
+
+            <td>{{ log[3] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <a href="/alerts" class="alerts-btn">
+
+        🚨 View Recent Alerts
+
+    </a>
+
+</div>
+
+<footer>
+
+    <p>CyberDefender-SIEM © 2026 | Security Monitoring Dashboard</p>
+
+</footer>
 
 </body>
 

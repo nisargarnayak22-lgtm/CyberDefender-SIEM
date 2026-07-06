@@ -258,6 +258,34 @@ Download SIEM logs in CSV format for reporting, auditing, and further analysis.
 
 ![Export Logs to CSV](screenshot/export_logs_csv.png)
 
+---
+
+## 📅 Day 12 - Professional Dashboard UI
+
+### 🚀 Features Added
+
+- Redesigned the SIEM dashboard with a modern professional interface.
+- Added responsive dashboard cards for log statistics.
+- Improved table layout and readability.
+- Styled search, filter, and export buttons.
+- Added a professional footer and consistent color theme.
+- Enhanced user experience with hover effects and clean typography.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- HTML5
+- CSS3
+- SQLite
+- Jinja2
+- Visual Studio Code
+
+### 📸 Professional Dashboard
+
+The dashboard was redesigned with a clean and modern interface to improve usability and provide a professional SIEM monitoring experience.
+
+![Professional Dashboard](screenshot/professional_dashboard.png)
 
 ## Project Structure
 
@@ -267,20 +295,30 @@ CyberDefender-SIEM/
 │   └── siem.db
 │
 ├── screenshot/
+│   ├── alert_engine.png
+│   ├── brute_force_detection.png
+│   ├── severity_classification.png
+│   ├── email_alert_terminal.png
+│   ├── gmail_alert.png
+│   ├── dashboard.png
+│   ├── recent_alerts_dashboard.png
+│   ├── search_by_username.png
+│   ├── filter_login_failed.png
+│   └── export_logs_csv.png
 │
 ├── src/
 │   ├── alert_engine.py
 │   ├── brute_force.py
 │   ├── database.py
 │   ├── email_alert.py
-│   ├── logger.py
 │   ├── severity.py
 │   └── web_dashboard.py
 │
 ├── templates/
 │   ├── dashboard.html
-│   └── alerts.html      
+│   └── alerts.html
 │
 ├── main.py
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
