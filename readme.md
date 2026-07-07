@@ -324,9 +324,6 @@ Search and filtering features can be used to quickly identify blacklisted IP add
 
 ## Project Structure
 
-## 📁 Project Structure
-
-```text
 CyberDefender-SIEM/
 │
 ├── database/
