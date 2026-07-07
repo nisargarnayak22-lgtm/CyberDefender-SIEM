@@ -324,6 +324,9 @@ Search and filtering features can be used to quickly identify blacklisted IP add
 
 ## Project Structure
 
+## 📁 Project Structure
+
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -341,13 +344,16 @@ CyberDefender-SIEM/
 │   ├── filter_login_failed.png
 │   ├── search_and_filter.png
 │   ├── export_logs_csv.png
-│   └── professional_dashboard.png
+│   ├── professional_dashboard.png
+│   ├── ip_reputation_dashboard.png
+│   └── blacklisted_ip_detection.png
 │
 ├── src/
 │   ├── alert_engine.py
 │   ├── brute_force.py
 │   ├── database.py
 │   ├── email_alert.py
+│   ├── ip_reputation.py
 │   ├── severity.py
 │   └── web_dashboard.py
 │
@@ -356,10 +362,11 @@ CyberDefender-SIEM/
 │       └── style.css
 │
 ├── templates/
-│   ├── dashboard.html
-│   └── alerts.html
+│   ├── alerts.html
+│   └── dashboard.html
 │
 ├── main.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
