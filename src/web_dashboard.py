@@ -4,6 +4,8 @@ import os
 import csv
 import io
 
+from ip_reputation import check_ip_reputation
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 app = Flask(
@@ -34,7 +36,7 @@ def dashboard():
     failed = cursor.fetchone()[0]
 
     query = """
-        SELECT timestamp, event, user, ip
+        SELECT timestamp,event,user,ip
         FROM logs
         WHERE user LIKE ?
     """
@@ -49,7 +51,21 @@ def dashboard():
 
     cursor.execute(query, params)
 
-    logs = cursor.fetchall()
+    rows = cursor.fetchall()
+
+    logs = []
+
+    for row in rows:
+
+        reputation = check_ip_reputation(row[3])
+
+        logs.append((
+            row[0],
+            row[1],
+            row[2],
+            row[3],
+            reputation
+        ))
 
     conn.close()
 
@@ -71,7 +87,7 @@ def alerts():
     cursor = conn.cursor()
 
     cursor.execute("""
-        SELECT timestamp, user, ip, event
+        SELECT timestamp,user,ip,event
         FROM logs
         WHERE event='LOGIN_FAILED'
         ORDER BY timestamp DESC
@@ -95,7 +111,7 @@ def export():
     cursor = conn.cursor()
 
     cursor.execute("""
-        SELECT timestamp, event, user, ip
+        SELECT timestamp,event,user,ip
         FROM logs
         ORDER BY timestamp DESC
     """)
@@ -107,14 +123,17 @@ def export():
     output = io.StringIO()
 
     writer = csv.writer(output)
+
     writer.writerow(["Timestamp", "Event", "User", "IP Address"])
+
     writer.writerows(rows)
 
     return Response(
         output.getvalue(),
         mimetype="text/csv",
         headers={
-            "Content-Disposition": "attachment; filename=siem_logs.csv"
+            "Content-Disposition":
+            "attachment; filename=siem_logs.csv"
         }
     )
 

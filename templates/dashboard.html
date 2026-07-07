@@ -12,9 +12,7 @@
 <body>
 
 <header>
-
     <h1>🛡 CyberDefender-SIEM Dashboard</h1>
-
 </header>
 
 <div class="container">
@@ -22,27 +20,18 @@
     <div class="cards">
 
         <div class="card total">
-
             <h2>Total Logs</h2>
-
             <p>{{ total }}</p>
-
         </div>
 
         <div class="card success">
-
             <h2>Successful Logins</h2>
-
             <p>{{ success }}</p>
-
         </div>
 
         <div class="card failed">
-
             <h2>Failed Logins</h2>
-
             <p>{{ failed }}</p>
-
         </div>
 
     </div>
@@ -74,13 +63,7 @@
         <button type="submit">🔍 Search</button>
 
         <a href="/export">
-
-            <button type="button">
-
-                📥 Export CSV
-
-            </button>
-
+            <button type="button">📥 Export CSV</button>
         </a>
 
     </form>
@@ -90,15 +73,11 @@
         <thead>
 
             <tr>
-
                 <th>Timestamp</th>
-
                 <th>Event</th>
-
                 <th>User</th>
-
                 <th>IP Address</th>
-
+                <th>Reputation</th>
             </tr>
 
         </thead>
@@ -114,13 +93,9 @@
             <td>
 
                 {% if log[1] == "LOGIN_SUCCESS" %}
-
                     <span class="success-text">🟢 {{ log[1] }}</span>
-
                 {% else %}
-
                     <span class="failed-text">🔴 {{ log[1] }}</span>
-
                 {% endif %}
 
             </td>
@@ -128,6 +103,28 @@
             <td>{{ log[2] }}</td>
 
             <td>{{ log[3] }}</td>
+
+            <td>
+
+                {% if log[4] == "Trusted" %}
+
+                    <span class="trusted-badge">🟢 Trusted</span>
+
+                {% elif log[4] == "Suspicious" %}
+
+                    <span class="suspicious-badge">🟡 Suspicious</span>
+
+                {% elif log[4] == "Blacklisted" %}
+
+                    <span class="blacklisted-badge">🔴 Blacklisted</span>
+
+                {% else %}
+
+                    <span class="unknown-badge">⚪ Unknown</span>
+
+                {% endif %}
+
+            </td>
 
         </tr>
 
@@ -140,16 +137,14 @@
     <br>
 
     <a href="/alerts" class="alerts-btn">
-
         🚨 View Recent Alerts
-
     </a>
 
 </div>
 
 <footer>
 
-    <p>CyberDefender-SIEM © 2026 | Security Monitoring Dashboard</p>
+    <p>CyberDefender-SIEM © 2026 | Threat Intelligence Dashboard</p>
 
 </footer>
 

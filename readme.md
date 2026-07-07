@@ -287,6 +287,41 @@ The dashboard was redesigned with a clean and modern interface to improve usabil
 
 ![Professional Dashboard](screenshot/professional_dashboard.png)
 
+---
+
+## 📅 Day 13 - IP Reputation & Threat Intelligence
+
+### 🚀 Features Added
+
+- Integrated an IP Reputation Engine into the SIEM dashboard.
+- Classified IP addresses as **Trusted**, **Suspicious**, **Blacklisted**, or **Unknown**.
+- Added a new **Reputation** column to the dashboard.
+- Displayed color-coded reputation badges for quick threat identification.
+- Enhanced security monitoring by identifying potentially malicious IP addresses.
+- Improved dashboard usability with real-time threat intelligence.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 IP Reputation Dashboard
+
+The dashboard now displays the reputation status of each IP address, allowing users to quickly distinguish between trusted and potentially malicious sources.
+
+![IP Reputation Dashboard](screenshot/ip_reputation_dashboard.png)
+
+### 📸 Blacklisted IP Detection
+
+Search and filtering features can be used to quickly identify blacklisted IP addresses associated with failed login attempts, improving threat analysis and incident response.
+
+![Blacklisted IP Detection](screenshot/blacklisted_ip_detection.png)
+
 ## Project Structure
 
 CyberDefender-SIEM/

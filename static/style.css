@@ -147,3 +147,34 @@ footer{
     padding:15px;
     font-size:16px;
 }
+.trusted-badge{
+    color:white;
+    background:#2e7d32;
+    padding:6px 10px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.suspicious-badge{
+    color:black;
+    background:#fbc02d;
+    padding:6px 10px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.blacklisted-badge{
+    color:white;
+    background:#c62828;
+    padding:6px 10px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.unknown-badge{
+    color:white;
+    background:#616161;
+    padding:6px 10px;
+    border-radius:5px;
+    font-weight:bold;
+}
