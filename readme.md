@@ -367,6 +367,8 @@ CyberDefender-SIEM/
 ├── README.md
 └── .gitignore
 
+---
+
 Author
 
 **Nisarga Nayak**
