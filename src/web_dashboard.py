@@ -17,6 +17,10 @@ app = Flask(
 DATABASE = os.path.join(BASE_DIR, "database", "siem.db")
 
 
+# =========================
+# Dashboard
+# =========================
+
 @app.route("/")
 def dashboard():
 
@@ -80,6 +84,10 @@ def dashboard():
     )
 
 
+# =========================
+# Alerts Page
+# =========================
+
 @app.route("/alerts")
 def alerts():
 
@@ -104,6 +112,41 @@ def alerts():
     )
 
 
+# =========================
+# User Activity Report
+# =========================
+
+@app.route("/user-report")
+def user_report():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            user,
+            SUM(CASE WHEN event='LOGIN_SUCCESS' THEN 1 ELSE 0 END) AS success_count,
+            SUM(CASE WHEN event='LOGIN_FAILED' THEN 1 ELSE 0 END) AS failed_count,
+            COUNT(*) AS total_activity
+        FROM logs
+        GROUP BY user
+        ORDER BY total_activity DESC
+    """)
+
+    report = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "user_report.html",
+        report=report
+    )
+
+
+# =========================
+# Export CSV
+# =========================
+
 @app.route("/export")
 def export():
 
@@ -124,7 +167,12 @@ def export():
 
     writer = csv.writer(output)
 
-    writer.writerow(["Timestamp", "Event", "User", "IP Address"])
+    writer.writerow([
+        "Timestamp",
+        "Event",
+        "User",
+        "IP Address"
+    ])
 
     writer.writerows(rows)
 
@@ -137,6 +185,10 @@ def export():
         }
     )
 
+
+# =========================
+# Run Flask
+# =========================
 
 if __name__ == "__main__":
     app.run(debug=True)

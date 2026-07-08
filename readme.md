@@ -322,6 +322,44 @@ Search and filtering features can be used to quickly identify blacklisted IP add
 
 ![Blacklisted IP Detection](screenshot/blacklisted_ip_detection.png)
 
+---
+
+## 📅 Day 14 - User Activity Report & Login Analytics
+
+### 🚀 Features Added
+
+- Added a dedicated **User Activity Report** page.
+- Displayed user-wise login statistics.
+- Counted successful logins for each user.
+- Counted failed logins for each user.
+- Calculated total activity for every user.
+- Added a navigation button from the dashboard to the User Activity Report page.
+- Improved SIEM reporting and auditing capabilities with a clean tabular interface.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 User Activity Report
+
+The User Activity Report provides a summary of successful logins, failed logins, and total activity for each user, making it easier to monitor user behavior.
+
+![User Activity Report](screenshot/user_activity_report.png)
+
+### 📸 Dashboard Navigation
+
+The dashboard now includes a dedicated **User Activity Report** button for quick access to user login analytics.
+
+![Dashboard User Report Button](screenshot/dashboard_user_report_button.png)
+
+---
+
 ## Project Structure
 
 CyberDefender-SIEM/

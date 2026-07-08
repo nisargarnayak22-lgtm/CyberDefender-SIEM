@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Activity Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📊 User Activity Report</h1>
+
+</header>
+
+<div class="container">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>User</th>
+
+                <th>Successful Logins</th>
+
+                <th>Failed Logins</th>
+
+                <th>Total Activity</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for row in report %}
+
+            <tr>
+
+                <td>{{ row[0] }}</td>
+
+                <td>
+                    <span class="trusted-badge">
+                        {{ row[1] }}
+                    </span>
+                </td>
+
+                <td>
+                    <span class="blacklisted-badge">
+                        {{ row[2] }}
+                    </span>
+                </td>
+
+                <td>
+                    <strong>{{ row[3] }}</strong>
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <a href="/" class="alerts-btn">
+
+        🏠 Back to Dashboard
+
+    </a>
+
+</div>
+
+<footer>
+
+    <p>
+
+        CyberDefender-SIEM © 2026 | User Activity Analytics
+
+    </p>
+
+</footer>
+
+</body>
+
+</html>
