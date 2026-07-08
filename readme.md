@@ -361,7 +361,9 @@ The dashboard now includes a dedicated **User Activity Report** button for quick
 ---
 
 ## Project Structure
+## 📁 Project Structure
 
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -381,7 +383,9 @@ CyberDefender-SIEM/
 │   ├── export_logs_csv.png
 │   ├── professional_dashboard.png
 │   ├── ip_reputation_dashboard.png
-│   └── blacklisted_ip_detection.png
+│   ├── blacklisted_ip_detection.png
+│   ├── user_activity_report.png
+│   └── dashboard_user_report_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -398,12 +402,14 @@ CyberDefender-SIEM/
 │
 ├── templates/
 │   ├── alerts.html
-│   └── dashboard.html
+│   ├── dashboard.html
+│   └── user_report.html
 │
 ├── main.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
 ---
 
