@@ -361,9 +361,7 @@ The dashboard now includes a dedicated **User Activity Report** button for quick
 ---
 
 ## Project Structure
-## 📁 Project Structure
 
-```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -409,7 +407,6 @@ CyberDefender-SIEM/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-```
 
 ---
 
