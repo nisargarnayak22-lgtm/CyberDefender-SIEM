@@ -399,7 +399,6 @@ The main dashboard now includes a dedicated **Security Analytics** button for qu
 
 ## 📁 Project Structure
 
-```text
 CyberDefender-SIEM/
 │
 ├── database/
