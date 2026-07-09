@@ -397,6 +397,9 @@ The main dashboard now includes a dedicated **Security Analytics** button for qu
 
 ## Project Structure
 
+## 📁 Project Structure
+
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -418,7 +421,9 @@ CyberDefender-SIEM/
 │   ├── ip_reputation_dashboard.png
 │   ├── blacklisted_ip_detection.png
 │   ├── user_activity_report.png
-│   └── dashboard_user_report_button.png
+│   ├── dashboard_user_report_button.png
+│   ├── security_analytics_dashboard.png
+│   └── dashboard_security_analytics_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -435,6 +440,7 @@ CyberDefender-SIEM/
 │
 ├── templates/
 │   ├── alerts.html
+│   ├── analytics.html
 │   ├── dashboard.html
 │   └── user_report.html
 │
@@ -442,6 +448,7 @@ CyberDefender-SIEM/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
 ---
 
