@@ -189,6 +189,66 @@ def export():
 # =========================
 # Run Flask
 # =========================
+# =========================
+# Security Analytics
+# =========================
+
+@app.route("/analytics")
+def analytics():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    # Successful Logins
+    cursor.execute("""
+        SELECT COUNT(*)
+        FROM logs
+        WHERE event='LOGIN_SUCCESS'
+    """)
+    success = cursor.fetchone()[0]
+
+    # Failed Logins
+    cursor.execute("""
+        SELECT COUNT(*)
+        FROM logs
+        WHERE event='LOGIN_FAILED'
+    """)
+    failed = cursor.fetchone()[0]
+
+    # Most Targeted User
+    cursor.execute("""
+        SELECT user, COUNT(*)
+        FROM logs
+        GROUP BY user
+        ORDER BY COUNT(*) DESC
+        LIMIT 1
+    """)
+    top_user = cursor.fetchone()
+
+    # Most Attacking IP
+    cursor.execute("""
+        SELECT ip, COUNT(*)
+        FROM logs
+        GROUP BY ip
+        ORDER BY COUNT(*) DESC
+        LIMIT 1
+    """)
+    top_ip = cursor.fetchone()
+
+    conn.close()
+
+    return render_template(
+        "analytics.html",
+        success=success,
+        failed=failed,
+        top_user=top_user,
+        top_ip=top_ip
+    )
+
+
+# =========================
+# Run Flask
+# =========================
 
 if __name__ == "__main__":
     app.run(debug=True)

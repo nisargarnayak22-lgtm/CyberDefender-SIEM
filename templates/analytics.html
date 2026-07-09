@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security Analytics Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📈 Security Analytics Dashboard</h1>
+
+</header>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card success">
+
+            <h2>Successful Logins</h2>
+
+            <p>{{ success }}</p>
+
+        </div>
+
+        <div class="card failed">
+
+            <h2>Failed Logins</h2>
+
+            <p>{{ failed }}</p>
+
+        </div>
+
+        <div class="card total">
+
+            <h2>Most Targeted User</h2>
+
+            <p>{{ top_user[0] }}</p>
+
+        </div>
+
+        <div class="card total">
+
+            <h2>Most Attacking IP</h2>
+
+            <p>{{ top_ip[0] }}</p>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Analytics</th>
+
+                <th>Value</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Total Successful Logins</td>
+
+                <td>{{ success }}</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Total Failed Logins</td>
+
+                <td>{{ failed }}</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Most Targeted User</td>
+
+                <td>{{ top_user[0] }}</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Total Events for User</td>
+
+                <td>{{ top_user[1] }}</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Most Attacking IP</td>
+
+                <td>{{ top_ip[0] }}</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Total Events from IP</td>
+
+                <td>{{ top_ip[1] }}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <a href="/" class="alerts-btn">
+
+        🏠 Back to Dashboard
+
+    </a>
+
+</div>
+
+<footer>
+
+    <p>
+
+        CyberDefender-SIEM © 2026 | Security Analytics
+
+    </p>
+
+</footer>
+
+</body>
+
+</html>

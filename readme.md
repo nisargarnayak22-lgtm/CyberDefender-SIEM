@@ -360,6 +360,41 @@ The dashboard now includes a dedicated **User Activity Report** button for quick
 
 ---
 
+## 📅 Day 15 - Security Analytics Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **Security Analytics Dashboard**.
+- Displayed total successful logins.
+- Displayed total failed logins.
+- Identified the most targeted user.
+- Identified the most attacking IP address.
+- Added an analytics summary table.
+- Integrated Security Analytics navigation into the main dashboard.
+- Enhanced SIEM reporting with security insights.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Security Analytics Dashboard
+
+The Security Analytics Dashboard provides a summary of login activity, identifies the most targeted user, highlights the most attacking IP address, and displays overall security statistics.
+
+![Security Analytics Dashboard](screenshot/security_analytics_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Security Analytics** button for quick access to security insights.
+
+![Dashboard Security Analytics Button](screenshot/dashboard_security_analytics_button.png)
+
 ## Project Structure
 
 CyberDefender-SIEM/
