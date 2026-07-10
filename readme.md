@@ -488,7 +488,6 @@ CyberDefender-SIEM/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-```
 
 ---
 
