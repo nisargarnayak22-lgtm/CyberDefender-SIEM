@@ -435,7 +435,6 @@ The main dashboard now includes a dedicated **Login Timeline** button for quick 
 
 ## Project Structure
 
-
 CyberDefender-SIEM/
 │
 ├── database/
