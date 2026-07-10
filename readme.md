@@ -434,7 +434,9 @@ The main dashboard now includes a dedicated **Login Timeline** button for quick 
 ---
 
 ## Project Structure
+## 📁 Project Structure
 
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -458,7 +460,9 @@ CyberDefender-SIEM/
 │   ├── user_activity_report.png
 │   ├── dashboard_user_report_button.png
 │   ├── security_analytics_dashboard.png
-│   └── dashboard_security_analytics_button.png
+│   ├── dashboard_security_analytics_button.png
+│   ├── login_activity_timeline.png
+│   └── dashboard_login_timeline_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -477,12 +481,14 @@ CyberDefender-SIEM/
 │   ├── alerts.html
 │   ├── analytics.html
 │   ├── dashboard.html
+│   ├── timeline.html
 │   └── user_report.html
 │
 ├── main.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
 ---
 
