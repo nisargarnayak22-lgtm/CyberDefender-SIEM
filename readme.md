@@ -414,7 +414,7 @@ The main dashboard now includes a dedicated **Security Analytics** button for qu
 -python
 - Flask
 - SQLite
-- 
+- HTML5
 - CSS3
 - Jinja2
 - Visual Studio Code
