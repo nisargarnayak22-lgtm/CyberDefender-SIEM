@@ -395,6 +395,44 @@ The main dashboard now includes a dedicated **Security Analytics** button for qu
 
 ![Dashboard Security Analytics Button](screenshot/dashboard_security_analytics_button.png)
 
+---
+
+## 📅 Day 16 - Login Activity Timeline
+
+### 🚀 Features Added
+
+- Added a dedicated **Login Activity Timeline** page.
+- Displays all login events in chronological order.
+- Shows login timestamp, event type, username, and IP address.
+- Highlights successful logins with green indicators.
+- Highlights failed logins with red indicators.
+- Integrated **Login Timeline** navigation into the main dashboard.
+- Improves incident investigation by providing a clear sequence of login activities.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Login Activity Timeline
+
+The Login Activity Timeline provides a chronological view of all login events, allowing security analysts to review user activity and investigate suspicious login attempts.
+
+![Login Activity Timeline](screenshot/login_activity_timeline.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Login Timeline** button for quick access to the chronological event history.
+
+![Dashboard Login Timeline Button](screenshot/dashboard_login_timeline_button.png)
+
+---
+
 ## Project Structure
 
 CyberDefender-SIEM/

@@ -249,6 +249,26 @@ def analytics():
 # =========================
 # Run Flask
 # =========================
+@app.route("/timeline")
+def timeline():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT timestamp, event, user, ip
+        FROM logs
+        ORDER BY timestamp DESC
+    """)
+
+    logs = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "timeline.html",
+        logs=logs
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
