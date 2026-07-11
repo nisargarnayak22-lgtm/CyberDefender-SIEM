@@ -468,6 +468,9 @@ The main dashboard now includes a dedicated **Failed Login Trends** button for q
 
 ## Project Structure
 
+## 📁 Project Structure
+
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -493,7 +496,9 @@ CyberDefender-SIEM/
 │   ├── security_analytics_dashboard.png
 │   ├── dashboard_security_analytics_button.png
 │   ├── login_activity_timeline.png
-│   └── dashboard_login_timeline_button.png
+│   ├── dashboard_login_timeline_button.png
+│   ├── failed_login_trends.png
+│   └── dashboard_failed_login_trends_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -512,6 +517,7 @@ CyberDefender-SIEM/
 │   ├── alerts.html
 │   ├── analytics.html
 │   ├── dashboard.html
+│   ├── failed_login_trends.html
 │   ├── timeline.html
 │   └── user_report.html
 │
@@ -519,6 +525,7 @@ CyberDefender-SIEM/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
 ---
 
