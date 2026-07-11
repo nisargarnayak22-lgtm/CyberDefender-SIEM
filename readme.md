@@ -470,7 +470,7 @@ The main dashboard now includes a dedicated **Failed Login Trends** button for q
 
 ## 📁 Project Structure
 
-```text
+
 CyberDefender-SIEM/
 │
 ├── database/
