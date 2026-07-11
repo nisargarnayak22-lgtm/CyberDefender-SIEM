@@ -269,6 +269,34 @@ def timeline():
         "timeline.html",
         logs=logs
     )
+    # =========================
+# Failed Login Trends
+# =========================
+
+@app.route("/failed-login-trends")
+def failed_login_trends():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            ip,
+            COUNT(*) AS failed_attempts
+        FROM logs
+        WHERE event='LOGIN_FAILED'
+        GROUP BY ip
+        ORDER BY failed_attempts DESC
+    """)
+
+    trends = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "failed_login_trends.html",
+        trends=trends
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
