@@ -464,7 +464,7 @@ The Failed Login Trends page provides a summary of failed login attempts by IP a
 
 The main dashboard now includes a dedicated **Failed Login Trends** button for quick access to IP-wise failed login statistics.
 
-![Dashboard Failed Login Trends Button](screenshot/dashboard_failed_login_trends_button.png)
+![Dashboard Failed Login Trends Button](screenshot/dashboard_failed_login_trends_button_v2.png)
 
 ## Project Structure
 
