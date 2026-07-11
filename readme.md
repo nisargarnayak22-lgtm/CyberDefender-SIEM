@@ -433,6 +433,39 @@ The main dashboard now includes a dedicated **Login Timeline** button for quick 
 
 ---
 
+## 📅 Day 17 - Failed Login Trends
+
+### 🚀 Features Added
+
+- Added a dedicated **Failed Login Trends** page.
+- Displays failed login attempts grouped by IP address.
+- Identifies IP addresses with the highest number of failed login attempts.
+- Helps detect suspicious login patterns and potential brute-force attacks.
+- Added **Failed Login Trends** navigation to the main dashboard.
+- Enhanced the SIEM dashboard with IP-based security insights.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Failed Login Trends
+
+The Failed Login Trends page provides a summary of failed login attempts by IP address, allowing security analysts to quickly identify suspicious or potentially malicious sources.
+
+![Failed Login Trends](screenshot/failed_login_trends.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Failed Login Trends** button for quick access to IP-wise failed login statistics.
+
+![Dashboard Failed Login Trends Button](screenshot/dashboard_failed_login_trends_button.png)
+
 ## Project Structure
 
 CyberDefender-SIEM/
