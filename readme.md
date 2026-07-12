@@ -496,7 +496,7 @@ The Top Active Users dashboard provides a ranked overview of user activity by di
 
 ![Top Active Users Dashboard](screenshot/top_active_users.png)
 
-
+### 📸 Dashboard Navigation
 
 The main dashboard now includes a dedicated **Top Active Users** button for quick access to user activity statistics and monitoring.
 
