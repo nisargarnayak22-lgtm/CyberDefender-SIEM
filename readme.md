@@ -502,6 +502,7 @@ The main dashboard now includes a dedicated **Top Active Users** button for quic
 
 ![Dashboard Top Active Users Button](screenshot/dashboard_top_active_users_button.png)
 
+---
 
 ## Project Structure
 
