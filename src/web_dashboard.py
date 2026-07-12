@@ -297,6 +297,35 @@ def failed_login_trends():
         "failed_login_trends.html",
         trends=trends
     )
+    # =========================
+# Top Active Users
+# =========================
+
+@app.route("/top-active-users")
+def top_active_users():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            user,
+            COUNT(*) AS total_events,
+            SUM(CASE WHEN event='LOGIN_SUCCESS' THEN 1 ELSE 0 END) AS successful_logins,
+            SUM(CASE WHEN event='LOGIN_FAILED' THEN 1 ELSE 0 END) AS failed_logins
+        FROM logs
+        GROUP BY user
+        ORDER BY total_events DESC
+    """)
+
+    users = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "top_active_users.html",
+        users=users
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
