@@ -504,8 +504,6 @@ The main dashboard now includes a dedicated **Top Active Users** button for quic
 
 ## Project Structure
 
-
-
 CyberDefender-SIEM/
 │
 ├── database/
