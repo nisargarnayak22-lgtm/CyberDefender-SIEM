@@ -466,6 +466,42 @@ The main dashboard now includes a dedicated **Failed Login Trends** button for q
 
 ![Dashboard Failed Login Trends Button](screenshot/dashboard_failed_login_trends_button_v2.png)
 
+---
+
+## 📅 Day 18 - Top Active Users Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **Top Active Users** dashboard.
+- Displays users ranked by total login activity.
+- Shows the total number of login events for each user.
+- Displays successful and failed login counts separately.
+- Helps identify highly active user accounts for security monitoring.
+- Integrated **Top Active Users** navigation into the main dashboard.
+- Enhanced SIEM reporting with user activity insights.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Top Active Users Dashboard
+
+The Top Active Users dashboard provides a ranked overview of user activity by displaying total login events, successful logins, and failed login attempts for each user. This helps security analysts quickly identify highly active accounts and monitor user behavior.
+
+![Top Active Users Dashboard](screenshot/top_active_users.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Top Active Users** button for quick access to user activity statistics and monitoring.
+
+![Dashboard Top Active Users Button](screenshot/dashboard_top_active_users_button.png)
+
 ## Project Structure
 
 CyberDefender-SIEM/
