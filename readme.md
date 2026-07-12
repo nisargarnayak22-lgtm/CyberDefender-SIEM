@@ -504,6 +504,9 @@ The main dashboard now includes a dedicated **Top Active Users** button for quic
 
 ## Project Structure
 
+## 📁 Project Structure
+
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -531,7 +534,9 @@ CyberDefender-SIEM/
 │   ├── login_activity_timeline.png
 │   ├── dashboard_login_timeline_button.png
 │   ├── failed_login_trends.png
-│   └── dashboard_failed_login_trends_button.png
+│   ├── dashboard_failed_login_trends_button.png
+│   ├── top_active_users.png
+│   └── dashboard_top_active_users_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -552,13 +557,14 @@ CyberDefender-SIEM/
 │   ├── dashboard.html
 │   ├── failed_login_trends.html
 │   ├── timeline.html
+│   ├── top_active_users.html
 │   └── user_report.html
 │
 ├── main.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
 ---
 
 **Author**
