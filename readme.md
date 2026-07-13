@@ -541,6 +541,9 @@ The main dashboard now includes a dedicated **Event Statistics** button for quic
 
 ## Project Structure
 
+## 📁 Project Structure
+
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -570,7 +573,9 @@ CyberDefender-SIEM/
 │   ├── failed_login_trends.png
 │   ├── dashboard_failed_login_trends_button.png
 │   ├── top_active_users.png
-│   └── dashboard_top_active_users_button.png
+│   ├── dashboard_top_active_users_button.png
+│   ├── event_statistics_dashboard.png
+│   └── dashboard_event_statistics_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -589,6 +594,7 @@ CyberDefender-SIEM/
 │   ├── alerts.html
 │   ├── analytics.html
 │   ├── dashboard.html
+│   ├── event_statistics.html
 │   ├── failed_login_trends.html
 │   ├── timeline.html
 │   ├── top_active_users.html
@@ -598,6 +604,7 @@ CyberDefender-SIEM/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
 ---
 
