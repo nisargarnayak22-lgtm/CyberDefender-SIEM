@@ -326,6 +326,33 @@ def top_active_users():
         "top_active_users.html",
         users=users
     )
+    # =========================
+# Event Statistics
+# =========================
+
+@app.route("/event-statistics")
+def event_statistics():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            event,
+            COUNT(*) AS total
+        FROM logs
+        GROUP BY event
+        ORDER BY total DESC
+    """)
+
+    events = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "event_statistics.html",
+        events=events
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
