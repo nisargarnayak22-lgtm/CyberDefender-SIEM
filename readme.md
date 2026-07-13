@@ -504,6 +504,39 @@ The main dashboard now includes a dedicated **Top Active Users** button for quic
 
 ---
 
+## 📅 Day 19 - Event Statistics Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **Event Statistics Dashboard**.
+- Displays the total number of occurrences for each event type.
+- Groups and summarizes security events collected by the SIEM.
+- Helps security analysts quickly understand overall event distribution.
+- Integrated **Event Statistics** navigation into the main dashboard.
+- Improved dashboard reporting with event-wise security insights.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Event Statistics Dashboard
+
+The Event Statistics Dashboard provides an overview of all security events by displaying the total count of each event type. This enables security analysts to monitor event distribution and identify the most frequent security activities within the system.
+
+![Event Statistics Dashboard](screenshot/event_statistics_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Event Statistics** button for quick access to event-wise security reports and statistics.
+
+![Dashboard Event Statistics Button](screenshot/dashboard_event_statistics_button.png)
+
 ## Project Structure
 
 CyberDefender-SIEM/
