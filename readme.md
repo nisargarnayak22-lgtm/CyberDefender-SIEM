@@ -541,7 +541,7 @@ The main dashboard now includes a dedicated **Event Statistics** button for quic
 
 ## Project Structure
 
-## 📁 Project Structure
+
 
 
 CyberDefender-SIEM/
