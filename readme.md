@@ -577,7 +577,7 @@ The main dashboard now includes a dedicated **Suspicious IPs** button for quick 
 ## Project Structure
 ## 📁 Project Structure
 
-```text
+
 CyberDefender-SIEM/
 │
 ├── database/
