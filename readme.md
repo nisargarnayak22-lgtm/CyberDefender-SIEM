@@ -575,7 +575,9 @@ The main dashboard now includes a dedicated **Suspicious IPs** button for quick 
 ---
 
 ## Project Structure
+## 📁 Project Structure
 
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -607,7 +609,9 @@ CyberDefender-SIEM/
 │   ├── top_active_users.png
 │   ├── dashboard_top_active_users_button.png
 │   ├── event_statistics_dashboard.png
-│   └── dashboard_event_statistics_button.png
+│   ├── dashboard_event_statistics_button.png
+│   ├── suspicious_ips_dashboard.png
+│   └── dashboard_suspicious_ips_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -628,6 +632,7 @@ CyberDefender-SIEM/
 │   ├── dashboard.html
 │   ├── event_statistics.html
 │   ├── failed_login_trends.html
+│   ├── suspicious_ips.html
 │   ├── timeline.html
 │   ├── top_active_users.html
 │   └── user_report.html
@@ -636,6 +641,7 @@ CyberDefender-SIEM/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
 ---
 
