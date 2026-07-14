@@ -539,6 +539,39 @@ The main dashboard now includes a dedicated **Event Statistics** button for quic
 
 ---
 
+## 📅 Day 20 - Suspicious IP Activity Report
+
+### 🚀 Features Added
+
+- Added a dedicated **Suspicious IP Activity Report** page.
+- Detects IP addresses with multiple failed login attempts.
+- Displays the total number of failed login attempts for each suspicious IP.
+- Highlights potentially malicious IP addresses for security monitoring.
+- Integrated **Suspicious IPs** navigation into the main dashboard.
+- Enhanced the SIEM dashboard with suspicious IP detection and reporting capabilities.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Suspicious IP Activity Report
+
+The Suspicious IP Activity Report identifies IP addresses that have generated multiple failed login attempts. This enables security analysts to quickly detect suspicious login behavior and investigate potential brute-force attacks.
+
+![Suspicious IP Activity Report](screenshot/suspicious_ips_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Suspicious IPs** button for quick access to suspicious IP activity and failed login monitoring.
+
+![Dashboard Suspicious IPs Button](screenshot/dashboard_suspicious_ips_button.png)
+
 ## Project Structure
 
 CyberDefender-SIEM/
