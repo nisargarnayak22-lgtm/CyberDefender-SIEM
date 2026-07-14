@@ -353,6 +353,35 @@ def event_statistics():
         "event_statistics.html",
         events=events
     )
+    # =========================
+# Suspicious IP Activity Report
+# =========================
+
+@app.route("/suspicious-ips")
+def suspicious_ips():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            ip,
+            COUNT(*) AS failed_attempts
+        FROM logs
+        WHERE event='LOGIN_FAILED'
+        GROUP BY ip
+        HAVING COUNT(*) >= 3
+        ORDER BY failed_attempts DESC
+    """)
+
+    ips = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "suspicious_ips.html",
+        ips=ips
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
