@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suspicious IP Activity Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🚨 Suspicious IP Activity Report</h1>
+
+</header>
+
+<div class="container">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>IP Address</th>
+                <th>Failed Attempts</th>
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for ip in ips %}
+
+            <tr>
+
+                <td>{{ ip[0] }}</td>
+
+                <td>{{ ip[1] }}</td>
+
+                <td>
+                    <span class="failed-text">
+                        🔴 Suspicious
+                    </span>
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <a href="/" class="alerts-btn">
+        🏠 Back to Dashboard
+    </a>
+
+</div>
+
+<footer>
+
+    <p>
+        CyberDefender-SIEM © 2026 | Suspicious IP Activity Report
+    </p>
+
+</footer>
+
+</body>
+
+</html>
