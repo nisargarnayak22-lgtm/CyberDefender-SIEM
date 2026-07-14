@@ -572,6 +572,8 @@ The main dashboard now includes a dedicated **Suspicious IPs** button for quick 
 
 ![Dashboard Suspicious IPs Button](screenshot/dashboard_suspicious_ips_button.png)
 
+---
+
 ## Project Structure
 
 CyberDefender-SIEM/
