@@ -382,6 +382,34 @@ def suspicious_ips():
         "suspicious_ips.html",
         ips=ips
     )
+# =========================
+# User Login History
+# =========================
+
+@app.route("/user-login-history")
+def user_login_history():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            timestamp,
+            user,
+            event,
+            ip
+        FROM logs
+        ORDER BY timestamp DESC
+    """)
+
+    history = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "user_login_history.html",
+        history=history
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
