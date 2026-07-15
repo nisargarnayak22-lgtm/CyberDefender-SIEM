@@ -574,6 +574,40 @@ The main dashboard now includes a dedicated **Suspicious IPs** button for quick 
 
 ---
 
+## 📅 Day 21 - User Login History
+
+### 🚀 Features Added
+
+- Added a dedicated **User Login History** page.
+- Displays a complete chronological history of user login activities.
+- Shows login timestamp, username, event type, and IP address.
+- Highlights successful logins with green indicators.
+- Highlights failed logins with red indicators.
+- Integrated **User Login History** navigation into the main dashboard.
+- Improved investigation capabilities by providing detailed login records for security analysis.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 User Login History Dashboard
+
+The User Login History dashboard provides a chronological view of all user login activities, including successful and failed login attempts. This helps security analysts investigate user behavior, review authentication events, and identify suspicious login patterns.
+
+![User Login History Dashboard](screenshot/user_login_history_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **User Login History** button, allowing quick access to detailed user authentication records for security monitoring and incident investigation.
+
+![Dashboard User Login History Button](screenshot/dashboard_user_login_history_button.png)
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
