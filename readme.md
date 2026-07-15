@@ -643,7 +643,9 @@ CyberDefender-SIEM/
 │   ├── event_statistics_dashboard.png
 │   ├── dashboard_event_statistics_button.png
 │   ├── suspicious_ips_dashboard.png
-│   └── dashboard_suspicious_ips_button.png
+│   ├── dashboard_suspicious_ips_button.png
+│   ├── user_login_history_dashboard.png
+│   └── dashboard_user_login_history_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -667,6 +669,7 @@ CyberDefender-SIEM/
 │   ├── suspicious_ips.html
 │   ├── timeline.html
 │   ├── top_active_users.html
+│   ├── user_login_history.html
 │   └── user_report.html
 │
 ├── main.py
