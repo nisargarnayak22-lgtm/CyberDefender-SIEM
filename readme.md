@@ -647,10 +647,20 @@ The main dashboard now includes a dedicated **Blacklisted IPs** button, allowing
 
 ## 📁 Project Structure
 
+## 📁 Project Structure
+
+
 CyberDefender-SIEM/
 │
 ├── database/
 │   └── siem.db
+│
+├── logs/
+│   ├── sample_logs.txt
+│   └── collected_logs.txt
+│
+├── alerts/
+│   └── alerts.csv
 │
 ├── screenshot/
 │   ├── alert_engine.png
@@ -682,14 +692,19 @@ CyberDefender-SIEM/
 │   ├── suspicious_ips_dashboard.png
 │   ├── dashboard_suspicious_ips_button.png
 │   ├── user_login_history_dashboard.png
-│   └── dashboard_user_login_history_button.png
+│   ├── dashboard_user_login_history_button.png
+│   ├── blacklisted_ips_dashboard.png
+│   └── dashboard_blacklisted_ips_button.png
 │
 ├── src/
 │   ├── alert_engine.py
 │   ├── brute_force.py
 │   ├── database.py
+│   ├── detector.py
 │   ├── email_alert.py
 │   ├── ip_reputation.py
+│   ├── log_collector.py
+│   ├── parser.py
 │   ├── severity.py
 │   └── web_dashboard.py
 │
@@ -700,6 +715,7 @@ CyberDefender-SIEM/
 ├── templates/
 │   ├── alerts.html
 │   ├── analytics.html
+│   ├── blacklisted_ips.html
 │   ├── dashboard.html
 │   ├── event_statistics.html
 │   ├── failed_login_trends.html
@@ -712,7 +728,8 @@ CyberDefender-SIEM/
 ├── main.py
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+├── .gitignore
+└── LICENSE
 
 ---
 
