@@ -643,6 +643,8 @@ The main dashboard now includes a dedicated **Blacklisted IPs** button, allowing
 
 ![Dashboard Blacklisted IPs Button](screenshot/dashboard_blacklisted_ips_button.png)
 
+---
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
