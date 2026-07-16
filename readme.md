@@ -608,6 +608,41 @@ The main dashboard now includes a dedicated **User Login History** button, allow
 
 ![Dashboard User Login History Button](screenshot/dashboard_user_login_history_button.png)
 
+---
+
+## 📅 Day 22 - Blacklisted IP Report
+
+### 🚀 Features Added
+
+- Added a dedicated **Blacklisted IP Report** page.
+- Displays all IP addresses identified as **Blacklisted** by the IP Reputation module.
+- Shows login timestamp, username, event type, IP address, and reputation status.
+- Helps security analysts quickly identify and investigate high-risk IP addresses.
+- Integrated **Blacklisted IPs** navigation into the main dashboard.
+- Improved threat intelligence capabilities by providing a centralized report for blacklisted IP activity.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Blacklisted IP Report
+
+The Blacklisted IP Report provides a dedicated view of all login events originating from IP addresses marked as **Blacklisted** by the IP Reputation system. This enables security analysts to quickly identify high-risk IPs and prioritize further investigation.
+
+![Blacklisted IP Report](screenshot/blacklisted_ips_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Blacklisted IPs** button, allowing analysts to quickly access high-risk IP activity and improve incident response efficiency.
+
+![Dashboard Blacklisted IPs Button](screenshot/dashboard_blacklisted_ips_button.png)
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
