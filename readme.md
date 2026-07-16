@@ -647,9 +647,6 @@ The main dashboard now includes a dedicated **Blacklisted IPs** button, allowing
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
-
-
 CyberDefender-SIEM/
 │
 ├── database/
