@@ -410,6 +410,46 @@ def user_login_history():
         "user_login_history.html",
         history=history
     )
+    # =========================
+# Blacklisted IP Report
+# =========================
+
+@app.route("/blacklisted-ips")
+def blacklisted_ips():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT timestamp, user, event, ip
+        FROM logs
+        ORDER BY timestamp DESC
+    """)
+
+    rows = cursor.fetchall()
+
+    blacklisted = []
+
+    for row in rows:
+
+        reputation = check_ip_reputation(row[3])
+
+        if reputation == "Blacklisted":
+
+            blacklisted.append((
+                row[0],
+                row[1],
+                row[2],
+                row[3],
+                reputation
+            ))
+
+    conn.close()
+
+    return render_template(
+        "blacklisted_ips.html",
+        blacklisted=blacklisted
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)

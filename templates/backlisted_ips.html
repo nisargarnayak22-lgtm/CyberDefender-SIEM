@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blacklisted IP Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🚫 Blacklisted IP Report</h1>
+
+</header>
+
+<div class="container">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Timestamp</th>
+                <th>User</th>
+                <th>Event</th>
+                <th>IP Address</th>
+                <th>Reputation</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for row in blacklisted %}
+
+            <tr>
+
+                <td>{{ row[0] }}</td>
+
+                <td>{{ row[1] }}</td>
+
+                <td>
+
+                    {% if row[2] == "LOGIN_SUCCESS" %}
+
+                        <span class="success-text">
+                            🟢 LOGIN_SUCCESS
+                        </span>
+
+                    {% else %}
+
+                        <span class="failed-text">
+                            🔴 LOGIN_FAILED
+                        </span>
+
+                    {% endif %}
+
+                </td>
+
+                <td>{{ row[3] }}</td>
+
+                <td>
+                    <span class="blacklisted-badge">
+                        🔴 Blacklisted
+                    </span>
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <a href="/" class="alerts-btn">
+        🏠 Back to Dashboard
+    </a>
+
+</div>
+
+<footer>
+
+    <p>
+        CyberDefender-SIEM © 2026 | Blacklisted IP Report
+    </p>
+
+</footer>
+
+</body>
+
+</html>
