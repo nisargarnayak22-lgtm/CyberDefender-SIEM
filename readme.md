@@ -680,7 +680,9 @@ The main dashboard now includes a dedicated **User Search** button, providing qu
 ![Dashboard User Search Button](screenshot/dashboard_user_search_button.png)
 
 ## 📁 Project Structure
+## 📁 Project Structure
 
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -725,7 +727,9 @@ CyberDefender-SIEM/
 │   ├── user_login_history_dashboard.png
 │   ├── dashboard_user_login_history_button.png
 │   ├── blacklisted_ips_dashboard.png
-│   └── dashboard_blacklisted_ips_button.png
+│   ├── dashboard_blacklisted_ips_button.png
+│   ├── user_search_dashboard.png
+│   └── dashboard_user_search_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -754,13 +758,15 @@ CyberDefender-SIEM/
 │   ├── timeline.html
 │   ├── top_active_users.html
 │   ├── user_login_history.html
-│   └── user_report.html
+│   ├── user_report.html
+│   └── user_search.html
 │
 ├── main.py
 ├── requirements.txt
 ├── README.md
-├── .gitignore
-└── LICENSE
+├── LICENSE
+└── .gitignore
+```
 
 ---
 
