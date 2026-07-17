@@ -679,6 +679,8 @@ The main dashboard now includes a dedicated **User Search** button, providing qu
 
 ![Dashboard User Search Button](screenshot/dashboard_user_search_button.png)
 
+---
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
