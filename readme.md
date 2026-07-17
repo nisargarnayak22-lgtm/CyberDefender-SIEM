@@ -767,7 +767,6 @@ CyberDefender-SIEM/
 ├── LICENSE
 └── .gitignore
 
----
 
 **Author**
 
