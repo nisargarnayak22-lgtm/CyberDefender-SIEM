@@ -450,6 +450,44 @@ def blacklisted_ips():
         "blacklisted_ips.html",
         blacklisted=blacklisted
     )
+# =========================
+# User Search Dashboard
+# =========================
+
+@app.route("/user-search", methods=["GET"])
+def user_search():
+
+    search = request.args.get("username", "")
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    if search:
+
+        cursor.execute("""
+            SELECT
+                timestamp,
+                user,
+                event,
+                ip
+            FROM logs
+            WHERE user LIKE ?
+            ORDER BY timestamp DESC
+        """, ('%' + search + '%',))
+
+        results = cursor.fetchall()
+
+    else:
+
+        results = []
+
+    conn.close()
+
+    return render_template(
+        "user_search.html",
+        results=results,
+        search=search
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
