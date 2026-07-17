@@ -766,11 +766,10 @@ CyberDefender-SIEM/
 ├── README.md
 ├── LICENSE
 └── .gitignore
-```
 
 ---
 
-***Author***
+**Author**
 
 **Nisarga Nayak**
 
