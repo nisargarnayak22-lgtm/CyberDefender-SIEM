@@ -681,7 +681,6 @@ The main dashboard now includes a dedicated **User Search** button, providing qu
 
 ## 📁 Project Structure
 
-```text
 CyberDefender-SIEM/
 │
 ├── database/
