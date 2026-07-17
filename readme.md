@@ -645,6 +645,40 @@ The main dashboard now includes a dedicated **Blacklisted IPs** button, allowing
 
 ---
 
+## 📅 Day 23 - User Search Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **User Search Dashboard**.
+- Allows security analysts to search login activities by username.
+- Displays login timestamp, username, event type, and IP address.
+- Supports quick investigation of user authentication history.
+- Highlights **successful** and **failed** login events with visual indicators.
+- Integrated **User Search** navigation into the main dashboard.
+- Improved incident investigation by enabling fast user-specific log analysis.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 User Search Dashboard
+
+The User Search Dashboard enables security analysts to search for a specific user and view all associated login activities. It provides a centralized view of authentication events, helping identify suspicious login behavior and support incident investigations.
+
+![User Search Dashboard](screenshot/user_search_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **User Search** button, providing quick access to user-specific login records and investigation tools.
+
+![Dashboard User Search Button](screenshot/dashboard_user_search_button.png)
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
