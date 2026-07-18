@@ -488,6 +488,44 @@ def user_search():
         results=results,
         search=search
     )
+    # =========================
+# Date Filter Dashboard
+# =========================
+
+@app.route("/date-filter", methods=["GET"])
+def date_filter():
+
+    selected_date = request.args.get("date", "")
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    if selected_date:
+
+        cursor.execute("""
+            SELECT
+                timestamp,
+                user,
+                event,
+                ip
+            FROM logs
+            WHERE DATE(timestamp)=?
+            ORDER BY timestamp DESC
+        """, (selected_date,))
+
+        results = cursor.fetchall()
+
+    else:
+
+        results = []
+
+    conn.close()
+
+    return render_template(
+        "date_filter.html",
+        results=results,
+        selected_date=selected_date
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
