@@ -715,6 +715,8 @@ The main dashboard now includes a dedicated **Date Filter** button, allowing ana
 
 ![Dashboard Date Filter Button](screenshot/dashboard_date_filter_button.png)
 
+---
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
@@ -763,7 +765,9 @@ CyberDefender-SIEM/
 │   ├── blacklisted_ips_dashboard.png
 │   ├── dashboard_blacklisted_ips_button.png
 │   ├── user_search_dashboard.png
-│   └── dashboard_user_search_button.png
+│   ├── dashboard_user_search_button.png
+│   ├── date_filter_dashboard.png
+│   └── dashboard_date_filter_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -786,6 +790,7 @@ CyberDefender-SIEM/
 │   ├── analytics.html
 │   ├── blacklisted_ips.html
 │   ├── dashboard.html
+│   ├── date_filter.html
 │   ├── event_statistics.html
 │   ├── failed_login_trends.html
 │   ├── suspicious_ips.html
