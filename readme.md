@@ -681,6 +681,40 @@ The main dashboard now includes a dedicated **User Search** button, providing qu
 
 ---
 
+## 📅 Day 24 - Login Activity by Date Filter
+
+### 🚀 Features Added
+
+- Added a dedicated **Login Activity by Date Filter** page.
+- Allows security analysts to filter login events based on a selected date.
+- Displays login timestamp, username, event type, and IP address for the selected day.
+- Enables quick investigation of daily authentication activities.
+- Highlights **successful** and **failed** login events using visual indicators.
+- Integrated the **Date Filter** feature into the main dashboard for easy navigation.
+- Improved incident response by providing date-wise log analysis and investigation capabilities.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Login Activity by Date Filter
+
+The Login Activity by Date Filter allows analysts to select a specific date and view all login events that occurred on that day. This feature simplifies daily log analysis, helps identify suspicious activities, and supports incident investigations by narrowing down authentication events to a particular timeframe.
+
+![Login Activity by Date Filter](screenshot/date_filter_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Date Filter** button, allowing analysts to quickly access date-wise login records and investigate authentication events efficiently.
+
+![Dashboard Date Filter Button](screenshot/dashboard_date_filter_button.png)
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
