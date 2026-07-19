@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Failed Login Investigation</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🚨 Failed Login Investigation Dashboard</h1>
+
+</header>
+
+<div class="container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Timestamp</th>
+<th>User</th>
+<th>Event</th>
+<th>IP Address</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% if results %}
+
+{% for row in results %}
+
+<tr>
+
+<td>{{ row[0] }}</td>
+
+<td>{{ row[1] }}</td>
+
+<td>
+
+<span class="failed-text">
+
+🔴 LOGIN_FAILED
+
+</span>
+
+</td>
+
+<td>{{ row[3] }}</td>
+
+</tr>
+
+{% endfor %}
+
+{% else %}
+
+<tr>
+
+<td colspan="4">
+
+No failed login records found.
+
+</td>
+
+</tr>
+
+{% endif %}
+
+</tbody>
+
+</table>
+
+<br>
+
+<a href="/" class="alerts-btn">
+
+🏠 Back to Dashboard
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+CyberDefender-SIEM © 2026 | Failed Login Investigation Dashboard
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

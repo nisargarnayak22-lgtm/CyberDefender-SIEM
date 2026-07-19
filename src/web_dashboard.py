@@ -526,6 +526,35 @@ def date_filter():
         results=results,
         selected_date=selected_date
     )
+    # =========================
+# Failed Login Investigation
+# =========================
+
+@app.route("/failed-login-investigation")
+def failed_login_investigation():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            timestamp,
+            user,
+            event,
+            ip
+        FROM logs
+        WHERE event='LOGIN_FAILED'
+        ORDER BY timestamp DESC
+    """)
+
+    results = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "failed_login_investigation.html",
+        results=results
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
