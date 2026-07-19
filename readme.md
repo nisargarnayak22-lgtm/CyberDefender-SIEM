@@ -751,8 +751,12 @@ The main dashboard now includes a dedicated **Failed Login Investigation** butto
 
 ![Dashboard Failed Login Investigation Button](screenshot/dashboard_failed_login_investigation_button.png)
 
+---
+
+## 📁 Project Structure
 ## 📁 Project Structure
 
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -801,7 +805,9 @@ CyberDefender-SIEM/
 │   ├── user_search_dashboard.png
 │   ├── dashboard_user_search_button.png
 │   ├── date_filter_dashboard.png
-│   └── dashboard_date_filter_button.png
+│   ├── dashboard_date_filter_button.png
+│   ├── failed_login_investigation_dashboard.png
+│   └── dashboard_failed_login_investigation_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -826,6 +832,7 @@ CyberDefender-SIEM/
 │   ├── dashboard.html
 │   ├── date_filter.html
 │   ├── event_statistics.html
+│   ├── failed_login_investigation.html
 │   ├── failed_login_trends.html
 │   ├── suspicious_ips.html
 │   ├── timeline.html
