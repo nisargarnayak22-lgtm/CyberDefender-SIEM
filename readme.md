@@ -717,6 +717,40 @@ The main dashboard now includes a dedicated **Date Filter** button, allowing ana
 
 ---
 
+## 📅 Day 25 - Failed Login Investigation Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **Failed Login Investigation Dashboard**.
+- Displays all **failed login attempts** in a centralized dashboard.
+- Shows login timestamp, username, failed event type, and IP address.
+- Helps security analysts quickly investigate suspicious authentication failures.
+- Displays failed login events in reverse chronological order for faster incident analysis.
+- Integrated the **Failed Login Investigation** feature into the main dashboard.
+- Improved threat investigation by providing a focused view of authentication failures.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Failed Login Investigation Dashboard
+
+The Failed Login Investigation Dashboard provides security analysts with a dedicated interface to monitor and investigate failed authentication attempts. It displays login timestamps, usernames, event types, and IP addresses, enabling faster identification of suspicious login activities and supporting incident response.
+
+![Failed Login Investigation Dashboard](screenshot/failed_login_investigation_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Failed Login Investigation** button, allowing analysts to quickly access failed authentication records and investigate suspicious login attempts efficiently.
+
+![Dashboard Failed Login Investigation Button](screenshot/dashboard_failed_login_investigation_button.png)
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
