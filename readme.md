@@ -755,8 +755,6 @@ The main dashboard now includes a dedicated **Failed Login Investigation** butto
 
 ## 📁 Project Structure
 
-
-
 CyberDefender-SIEM/
 │
 ├── database/
