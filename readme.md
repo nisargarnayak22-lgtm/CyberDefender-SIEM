@@ -791,6 +791,9 @@ The main dashboard now includes a dedicated **IP Search** button, allowing analy
 
 ## 📁 Project Structure
 
+## 📁 Project Structure
+
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -841,7 +844,9 @@ CyberDefender-SIEM/
 │   ├── date_filter_dashboard.png
 │   ├── dashboard_date_filter_button.png
 │   ├── failed_login_investigation_dashboard.png
-│   └── dashboard_failed_login_investigation_button.png
+│   ├── dashboard_failed_login_investigation_button.png
+│   ├── ip_search_dashboard.png
+│   └── dashboard_ip_search_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -868,6 +873,7 @@ CyberDefender-SIEM/
 │   ├── event_statistics.html
 │   ├── failed_login_investigation.html
 │   ├── failed_login_trends.html
+│   ├── ip_search.html
 │   ├── suspicious_ips.html
 │   ├── timeline.html
 │   ├── top_active_users.html
@@ -880,6 +886,7 @@ CyberDefender-SIEM/
 ├── README.md
 ├── LICENSE
 └── .gitignore
+```
 
 ---
 
