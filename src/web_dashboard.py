@@ -555,6 +555,44 @@ def failed_login_investigation():
         "failed_login_investigation.html",
         results=results
     )
+    # =========================
+# IP Search Dashboard
+# =========================
+
+@app.route("/ip-search", methods=["GET"])
+def ip_search():
+
+    search_ip = request.args.get("ip", "")
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    if search_ip:
+
+        cursor.execute("""
+            SELECT
+                timestamp,
+                user,
+                event,
+                ip
+            FROM logs
+            WHERE ip LIKE ?
+            ORDER BY timestamp DESC
+        """, ('%' + search_ip + '%',))
+
+        results = cursor.fetchall()
+
+    else:
+
+        results = []
+
+    conn.close()
+
+    return render_template(
+        "ip_search.html",
+        results=results,
+        search_ip=search_ip
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
