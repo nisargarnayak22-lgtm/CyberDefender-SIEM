@@ -791,7 +791,7 @@ The main dashboard now includes a dedicated **IP Search** button, allowing analy
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
+
 
 ```text
 CyberDefender-SIEM/
@@ -886,7 +886,6 @@ CyberDefender-SIEM/
 ├── README.md
 ├── LICENSE
 └── .gitignore
-```
 
 ---
 
