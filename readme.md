@@ -791,9 +791,6 @@ The main dashboard now includes a dedicated **IP Search** button, allowing analy
 
 ## 📁 Project Structure
 
-
-
-```text
 CyberDefender-SIEM/
 │
 ├── database/
