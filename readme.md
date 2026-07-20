@@ -753,6 +753,42 @@ The main dashboard now includes a dedicated **Failed Login Investigation** butto
 
 ---
 
+## 📅 Day 26 - IP Address Search Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **IP Address Search Dashboard**.
+- Allows security analysts to search login activities using an IP address.
+- Displays login timestamp, username, event type, and IP address.
+- Supports rapid investigation of suspicious or malicious IP addresses.
+- Highlights **successful** and **failed** login events using visual indicators.
+- Integrated the **IP Search** feature into the main dashboard.
+- Improved threat investigation by providing IP-based authentication history and activity tracking.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 IP Address Search Dashboard
+
+The IP Address Search Dashboard enables security analysts to investigate all login activities associated with a specific IP address. It displays authentication events, usernames, timestamps, and IP addresses, helping identify suspicious login behavior, repeated attacks, and unauthorized access attempts.
+
+![IP Address Search Dashboard](screenshot/ip_search_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **IP Search** button, allowing analysts to quickly investigate authentication records based on IP addresses and perform faster security investigations.
+
+![Dashboard IP Search Button](screenshot/dashboard_ip_search_button.png)
+
+---
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
