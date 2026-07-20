@@ -773,7 +773,7 @@ The main dashboard now includes a dedicated **Failed Login Investigation** butto
 - HTML5
 - CSS3
 - Jinja2
-- Visual Studio Code
+- 
 
 ### 📸 IP Address Search Dashboard
 
