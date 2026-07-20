@@ -767,7 +767,7 @@ The main dashboard now includes a dedicated **Failed Login Investigation** butto
 
 ### 🛠 Tools & Technologies Used
 
-- 
+- python
 - Flask
 - SQLite
 - HTML5
