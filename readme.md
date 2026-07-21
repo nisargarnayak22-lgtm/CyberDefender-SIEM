@@ -828,6 +828,9 @@ The main dashboard now includes a dedicated **User Login Summary** button, enabl
 
 ## 📁 Project Structure
 
+## 📁 Project Structure
+
+```text
 CyberDefender-SIEM/
 │
 ├── database/
@@ -880,7 +883,9 @@ CyberDefender-SIEM/
 │   ├── failed_login_investigation_dashboard.png
 │   ├── dashboard_failed_login_investigation_button.png
 │   ├── ip_search_dashboard.png
-│   └── dashboard_ip_search_button.png
+│   ├── dashboard_ip_search_button.png
+│   ├── user_login_summary_dashboard.png
+│   └── dashboard_user_login_summary_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -912,6 +917,7 @@ CyberDefender-SIEM/
 │   ├── timeline.html
 │   ├── top_active_users.html
 │   ├── user_login_history.html
+│   ├── user_login_summary.html
 │   ├── user_report.html
 │   └── user_search.html
 │
@@ -920,6 +926,7 @@ CyberDefender-SIEM/
 ├── README.md
 ├── LICENSE
 └── .gitignore
+```
 
 ---
 
