@@ -622,6 +622,33 @@ def user_login_summary():
         "user_login_summary.html",
         summary=summary
     )
+# =========================
+# Login Hourly Activity Dashboard
+# =========================
+
+@app.route("/login-hourly-activity")
+def login_hourly_activity():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            strftime('%H', timestamp) AS hour,
+            COUNT(*) AS login_count
+        FROM logs
+        GROUP BY hour
+        ORDER BY hour
+    """)
+
+    activity = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "login_hourly_activity.html",
+        activity=activity
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)

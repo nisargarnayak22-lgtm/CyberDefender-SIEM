@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login Hourly Activity</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>⏰ Login Hourly Activity Dashboard</h1>
+
+</header>
+
+<div class="container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Hour</th>
+<th>Login Count</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% if activity %}
+
+{% for row in activity %}
+
+<tr>
+
+<td>{{ row[0] }}:00</td>
+<td>{{ row[1] }}</td>
+
+</tr>
+
+{% endfor %}
+
+{% else %}
+
+<tr>
+
+<td colspan="2">
+
+No login activity found.
+
+</td>
+
+</tr>
+
+{% endif %}
+
+</tbody>
+
+</table>
+
+<br>
+
+<a href="/" class="alerts-btn">
+
+🏠 Back to Dashboard
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+CyberDefender-SIEM © 2026 | Login Hourly Activity Dashboard
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

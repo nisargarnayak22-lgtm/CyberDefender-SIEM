@@ -825,6 +825,42 @@ The main dashboard now includes a dedicated **User Login Summary** button, enabl
 
 ---
 
+## 📅 Day 28 - Login Hourly Activity Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **Login Hourly Activity Dashboard**.
+- Displays the total number of login events for each hour of the day.
+- Helps identify peak login hours and unusual authentication activity.
+- Provides an hourly breakdown of login records for security monitoring.
+- Supports detection of suspicious after-hours login attempts.
+- Integrated the **Login Hourly Activity** feature into the main dashboard.
+- Improved authentication monitoring through time-based login analysis.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Login Hourly Activity Dashboard
+
+The Login Hourly Activity Dashboard provides an hourly summary of authentication events. It displays the number of login activities that occurred during each hour of the day, helping security analysts identify peak usage periods, detect abnormal login patterns, and investigate suspicious after-hours authentication attempts.
+
+![Login Hourly Activity Dashboard](screenshot/login_hourly_activity_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Login Hourly Activity** button, allowing analysts to quickly access hour-wise login statistics and perform time-based authentication analysis directly from the SIEM dashboard.
+
+![Dashboard Login Hourly Activity Button](screenshot/dashboard_login_hourly_activity_button.png)
+
+---
+
 
 ## 📁 Project Structure
 
