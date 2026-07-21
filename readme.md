@@ -828,7 +828,7 @@ The main dashboard now includes a dedicated **User Login Summary** button, enabl
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
+
 
 CyberDefender-SIEM/
 │
