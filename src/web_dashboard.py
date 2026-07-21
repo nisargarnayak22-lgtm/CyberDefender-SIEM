@@ -593,6 +593,35 @@ def ip_search():
         results=results,
         search_ip=search_ip
     )
+    # =========================
+# User Login Summary Dashboard
+# =========================
+
+@app.route("/user-login-summary")
+def user_login_summary():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            user,
+            COUNT(*) AS total_logins,
+            SUM(CASE WHEN event='LOGIN_SUCCESS' THEN 1 ELSE 0 END) AS successful_logins,
+            SUM(CASE WHEN event='LOGIN_FAILED' THEN 1 ELSE 0 END) AS failed_logins
+        FROM logs
+        GROUP BY user
+        ORDER BY total_logins DESC
+    """)
+
+    summary = cursor.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "user_login_summary.html",
+        summary=summary
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
