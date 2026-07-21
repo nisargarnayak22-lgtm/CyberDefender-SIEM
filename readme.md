@@ -822,6 +822,10 @@ The User Login Summary Dashboard provides a consolidated view of authentication 
 The main dashboard now includes a dedicated **User Login Summary** button, enabling analysts to access user-wise authentication statistics directly from the SIEM dashboard for faster security monitoring and investigation.
 
 ![Dashboard User Login Summary Button](screenshot/dashboard_user_login_summary_button.png)
+
+---
+
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
