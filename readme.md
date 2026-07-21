@@ -926,7 +926,6 @@ CyberDefender-SIEM/
 ├── README.md
 ├── LICENSE
 └── .gitignore
-```
 
 ---
 
