@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>User Login Summary</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>👥 User Login Summary Dashboard</h1>
+
+</header>
+
+<div class="container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>User</th>
+<th>Total Logins</th>
+<th>Successful Logins</th>
+<th>Failed Logins</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% if summary %}
+
+{% for row in summary %}
+
+<tr>
+
+<td>{{ row[0] }}</td>
+
+<td>{{ row[1] }}</td>
+
+<td>
+
+<span class="success-text">
+
+🟢 {{ row[2] }}
+
+</span>
+
+</td>
+
+<td>
+
+<span class="failed-text">
+
+🔴 {{ row[3] }}
+
+</span>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+{% else %}
+
+<tr>
+
+<td colspan="4">
+
+No user login records available.
+
+</td>
+
+</tr>
+
+{% endif %}
+
+</tbody>
+
+</table>
+
+<br>
+
+<a href="/" class="alerts-btn">
+
+🏠 Back to Dashboard
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+CyberDefender-SIEM © 2026 | User Login Summary Dashboard
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
