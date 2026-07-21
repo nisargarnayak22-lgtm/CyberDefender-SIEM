@@ -917,7 +917,9 @@ CyberDefender-SIEM/
 │   ├── ip_search_dashboard.png
 │   ├── dashboard_ip_search_button.png
 │   ├── user_login_summary_dashboard.png
-│   └── dashboard_user_login_summary_button.png
+│   ├── dashboard_user_login_summary_button.png
+│   ├── login_hourly_activity_dashboard.png
+│   └── dashboard_login_hourly_activity_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -945,6 +947,7 @@ CyberDefender-SIEM/
 │   ├── failed_login_investigation.html
 │   ├── failed_login_trends.html
 │   ├── ip_search.html
+│   ├── login_hourly_activity.html
 │   ├── suspicious_ips.html
 │   ├── timeline.html
 │   ├── top_active_users.html
