@@ -789,6 +789,39 @@ The main dashboard now includes a dedicated **IP Search** button, allowing analy
 
 ---
 
+## 📅 Day 27 - User Login Summary Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **User Login Summary Dashboard**.
+- Displays login statistics grouped by individual users.
+- Shows the total number of login attempts for each user.
+- Separately displays **successful** and **failed** login counts.
+- Helps security analysts identify users with frequent authentication failures.
+- Provides a quick overview of user authentication behavior.
+- Integrated the **User Login Summary** feature into the main dashboard for easy navigation.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 User Login Summary Dashboard
+
+The User Login Summary Dashboard provides a consolidated view of authentication activities for each user. It displays the total number of login attempts along with successful and failed logins, allowing security analysts to quickly identify abnormal user behavior and investigate potential security incidents.
+
+![User Login Summary Dashboard](screenshot/user_login_summary_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **User Login Summary** button, enabling analysts to access user-wise authentication statistics directly from the SIEM dashboard for faster security monitoring and investigation.
+
+![Dashboard User Login Summary Button](screenshot/dashboard_user_login_summary_button.png)
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
