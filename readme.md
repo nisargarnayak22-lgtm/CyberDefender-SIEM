@@ -861,7 +861,6 @@ The main dashboard now includes a dedicated **Login Hourly Activity** button, al
 
 ---
 
-
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
