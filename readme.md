@@ -1043,8 +1043,7 @@ CyberDefender-SIEM/
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
-└── .gitignore
-
+└── 
 ---
 
 ## 👨‍💻 Author
