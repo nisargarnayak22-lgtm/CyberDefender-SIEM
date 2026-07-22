@@ -936,7 +936,6 @@ The main dashboard now includes a dedicated **System Health** button, allowing u
 
 ![Dashboard System Health Button](screenshot/dashboard_system_health_button.png)
 
----
 
 ## 📁 Project Structure
 
