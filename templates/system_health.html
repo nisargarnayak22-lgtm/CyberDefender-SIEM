@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>System Health Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>💚 System Health Dashboard</h1>
+
+</header>
+
+<div class="container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Component</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Database</td>
+<td>{{ database }}</td>
+</tr>
+
+<tr>
+<td>Web Dashboard</td>
+<td>{{ dashboard }}</td>
+</tr>
+
+<tr>
+<td>Log Collector</td>
+<td>{{ log_collector }}</td>
+</tr>
+
+<tr>
+<td>Alert Engine</td>
+<td>{{ alert_engine }}</td>
+</tr>
+
+<tr>
+<td>Threat Detection</td>
+<td>{{ threat_detection }}</td>
+</tr>
+
+<tr>
+<td>Email Notification</td>
+<td>{{ email_service }}</td>
+</tr>
+
+<tr>
+<td><strong>Overall System</strong></td>
+<td><strong>{{ system }}</strong></td>
+</tr>
+
+</tbody>
+
+</table>
+
+<br>
+
+<a href="/" class="alerts-btn">
+
+🏠 Back to Dashboard
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+CyberDefender-SIEM © 2026 | System Health Dashboard
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

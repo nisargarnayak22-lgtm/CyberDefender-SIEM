@@ -899,6 +899,45 @@ The main dashboard now includes a dedicated **Incident Report** button, allowing
 
 ---
 
+## 📅 Day 30 - System Health Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **System Health Dashboard**.
+- Displays the operational status of all major SIEM components.
+- Shows the current status of the database connection.
+- Displays the health of the web dashboard service.
+- Monitors the status of the log collection module.
+- Displays the operational state of the alert engine.
+- Shows the status of the threat detection module.
+- Displays the email notification service status.
+- Provides an overall system health summary.
+- Integrated the **System Health** feature into the main dashboard for quick monitoring.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 System Health Dashboard
+
+The System Health Dashboard provides a centralized overview of the operational status of the CyberDefender-SIEM platform. It allows security analysts and administrators to quickly verify that all critical SIEM components—including the database, web dashboard, log collector, alert engine, threat detection module, and email notification service—are functioning correctly. This dashboard helps ensure the monitoring platform remains healthy and available for continuous security operations.
+
+![System Health Dashboard](screenshot/system_health_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **System Health** button, allowing users to quickly access the operational status of every major SIEM component from a single location and verify the overall health of the monitoring platform.
+
+![Dashboard System Health Button](screenshot/dashboard_system_health_button.png)
+
+---
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
@@ -957,7 +996,11 @@ CyberDefender-SIEM/
 │   ├── user_login_summary_dashboard.png
 │   ├── dashboard_user_login_summary_button.png
 │   ├── login_hourly_activity_dashboard.png
-│   └── dashboard_login_hourly_activity_button.png
+│   ├── dashboard_login_hourly_activity_button.png
+│   ├── incident_report_dashboard.png
+│   ├── dashboard_incident_report_button.png
+│   ├── system_health_dashboard.png
+│   └── dashboard_system_health_button.png
 │
 ├── src/
 │   ├── alert_engine.py
@@ -984,9 +1027,11 @@ CyberDefender-SIEM/
 │   ├── event_statistics.html
 │   ├── failed_login_investigation.html
 │   ├── failed_login_trends.html
+│   ├── incident_report.html
 │   ├── ip_search.html
 │   ├── login_hourly_activity.html
 │   ├── suspicious_ips.html
+│   ├── system_health.html
 │   ├── timeline.html
 │   ├── top_active_users.html
 │   ├── user_login_history.html

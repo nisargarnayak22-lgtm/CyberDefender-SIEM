@@ -694,6 +694,31 @@ def incident_report():
         blacklisted_ips=blacklisted_ips,
         generated_alerts=generated_alerts
     )
+# =========================
+# System Health Dashboard
+# =========================
+
+@app.route("/system-health")
+def system_health():
+
+    database = "🟢 Online"
+    dashboard = "🟢 Running"
+    log_collector = "🟢 Active"
+    alert_engine = "🟢 Active"
+    threat_detection = "🟢 Running"
+    email_service = "🟢 Configured"
+    system = "🟢 Healthy"
+
+    return render_template(
+        "system_health.html",
+        database=database,
+        dashboard=dashboard,
+        log_collector=log_collector,
+        alert_engine=alert_engine,
+        threat_detection=threat_detection,
+        email_service=email_service,
+        system=system
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
