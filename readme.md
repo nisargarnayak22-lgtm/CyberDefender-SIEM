@@ -861,6 +861,44 @@ The main dashboard now includes a dedicated **Login Hourly Activity** button, al
 
 ---
 
+## 📅 Day 29 - Security Incident Report Dashboard
+
+### 🚀 Features Added
+
+- Added a dedicated **Security Incident Report Dashboard**.
+- Displays an executive summary of key security metrics.
+- Shows the total number of login attempts.
+- Displays successful and failed login statistics.
+- Provides the total number of suspicious IP addresses detected.
+- Displays the number of blacklisted IP addresses.
+- Shows the total number of generated security alerts.
+- Integrated the **Incident Report** feature into the main dashboard for quick access.
+- Provides a centralized overview of the system's security status for faster decision-making.
+
+### 🛠 Tools & Technologies Used
+
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
+- Visual Studio Code
+
+### 📸 Security Incident Report Dashboard
+
+The Security Incident Report Dashboard provides a centralized overview of the SIEM environment by displaying important security metrics such as total login attempts, successful logins, failed logins, suspicious IPs, blacklisted IPs, and generated alerts. This dashboard helps security analysts quickly assess the overall security posture and prioritize incident investigations.
+
+![Security Incident Report Dashboard](screenshot/incident_report_dashboard.png)
+
+### 📸 Dashboard Navigation
+
+The main dashboard now includes a dedicated **Incident Report** button, allowing analysts to quickly access the executive security summary and monitor overall authentication and security statistics from a single location.
+
+![Dashboard Incident Report Button](screenshot/dashboard_incident_report_button.png)
+
+---
+
 ## 📁 Project Structure
 
 CyberDefender-SIEM/

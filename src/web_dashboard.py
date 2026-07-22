@@ -649,6 +649,51 @@ def login_hourly_activity():
         "login_hourly_activity.html",
         activity=activity
     )
+    # =========================
+# Security Incident Report Dashboard
+# =========================
+
+@app.route("/incident-report")
+def incident_report():
+
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+
+    # Total Login Attempts
+    cursor.execute("SELECT COUNT(*) FROM logs")
+    total_logins = cursor.fetchone()[0]
+
+    # Successful Logins
+    cursor.execute("SELECT COUNT(*) FROM logs WHERE event='LOGIN_SUCCESS'")
+    successful_logins = cursor.fetchone()[0]
+
+    # Failed Logins
+    cursor.execute("SELECT COUNT(*) FROM logs WHERE event='LOGIN_FAILED'")
+    failed_logins = cursor.fetchone()[0]
+
+    # Suspicious IPs
+    cursor.execute("SELECT COUNT(DISTINCT ip) FROM logs WHERE event='LOGIN_FAILED'")
+    suspicious_ips = cursor.fetchone()[0]
+
+    # Blacklisted IPs
+    cursor.execute("SELECT COUNT(*) FROM logs WHERE ip LIKE '192.168.%'")
+    blacklisted_ips = cursor.fetchone()[0]
+
+    # Generated Alerts
+    cursor.execute("SELECT COUNT(*) FROM logs WHERE event='LOGIN_FAILED'")
+    generated_alerts = cursor.fetchone()[0]
+
+    conn.close()
+
+    return render_template(
+        "incident_report.html",
+        total_logins=total_logins,
+        successful_logins=successful_logins,
+        failed_logins=failed_logins,
+        suspicious_ips=suspicious_ips,
+        blacklisted_ips=blacklisted_ips,
+        generated_alerts=generated_alerts
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)

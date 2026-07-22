@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Security Incident Report</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🛡 Security Incident Report Dashboard</h1>
+
+</header>
+
+<div class="container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Security Metric</th>
+<th>Count</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Total Login Attempts</td>
+<td>{{ total_logins }}</td>
+</tr>
+
+<tr>
+<td>Successful Logins</td>
+<td>{{ successful_logins }}</td>
+</tr>
+
+<tr>
+<td>Failed Logins</td>
+<td>{{ failed_logins }}</td>
+</tr>
+
+<tr>
+<td>Suspicious IPs</td>
+<td>{{ suspicious_ips }}</td>
+</tr>
+
+<tr>
+<td>Blacklisted IPs</td>
+<td>{{ blacklisted_ips }}</td>
+</tr>
+
+<tr>
+<td>Generated Alerts</td>
+<td>{{ generated_alerts }}</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<br>
+
+<a href="/" class="alerts-btn">
+
+🏠 Back to Dashboard
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+CyberDefender-SIEM © 2026 | Security Incident Report Dashboard
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
