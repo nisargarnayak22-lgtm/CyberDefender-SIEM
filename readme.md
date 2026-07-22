@@ -938,7 +938,6 @@ The main dashboard now includes a dedicated **System Health** button, allowing u
 
 ---
 
-
 ## 📁 Project Structure
 
 CyberDefender-SIEM/
