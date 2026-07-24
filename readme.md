@@ -144,7 +144,7 @@ CyberDefender-SIEM/
 ---
 
 # 🛠 Technology Stack
-
+ __ __ __ __ __ __ __ __ __ __ __ __ __ __
 | Component        | Technology          |
 | ---------------- | ------------------- |
 | Language         | Python 3            |
@@ -153,8 +153,8 @@ CyberDefender-SIEM/
 | Frontend         | HTML5, CSS3, Jinja2 |
 | Threat Detection | Python              |
 | Reporting        | CSV Export          |
-| Version Control  | Git & GitHub        |
-
+| Version Control  | Git & GitHub        | 
+__ __ __ __ __ __ __ __ __ __ __ __ __ __ 
 ---
 
 # 🚀 Getting Started
@@ -194,3 +194,46 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+---
+
+# ▶ Running the Project
+
+### Start the Flask Application
+
+```bash
+python src/web_dashboard.py
+```
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+# 📄 Documentation
+
+The project includes comprehensive documentation covering the core modules and architecture of the SIEM platform.
+
+- 📌 System Architecture
+- 📌 Threat Detection Engine
+- 📌 Security Dashboard
+- 📌 Database Design
+- 📌 Incident Reporting
+- 📌 User Activity Monitoring
+- 📌 System Health Dashboard
+
+---
+
+### 👨‍💻 Author
+
+Nisarga Nayak
+
+B.Tech – Computer Science & Engineering (Networks)
+
+Presidency University
+
+GitHub
+
+https://github.com/nisargarnayak22-lgtm
