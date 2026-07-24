@@ -98,7 +98,8 @@ Update Security Dashboards
 
 ---
 
-#  project structure
+###  project Architecture
+
 
                CyberDefender-SIEM
 
@@ -123,7 +124,7 @@ Update Security Dashboards
 
 ---
 
-# 📁 Project Structure
+### 📁 Project Structure
 
 CyberDefender-SIEM/
 │
@@ -143,7 +144,7 @@ CyberDefender-SIEM/
 
 ---
 
-# 🛠 Technology Stack
+### 🛠 Technology Stack
  __ __ __ __ __ __ __ __ __ __ __ __ __ __
 | Component        | Technology          |
 | ---------------- | ------------------- |
@@ -157,7 +158,7 @@ CyberDefender-SIEM/
 __ __ __ __ __ __ __ __ __ __ __ __ __ __ 
 ---
 
-# 🚀 Getting Started
+### 🚀 Getting Started
 
 ### Clone Repository
 
