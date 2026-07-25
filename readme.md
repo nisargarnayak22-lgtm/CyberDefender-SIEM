@@ -240,4 +240,4 @@ https://github.com/nisargarnayak22-lgtm
 
 linkedin
 
-in/nisarga-nayak
+ https://www.linkedin.com/in/Nisarga Nayak
