@@ -61,6 +61,8 @@ CyberDefender-SIEM is a Python-based Security Information and Event Management (
           System Health Monitoring
 ```
 
+---
+
 # 🔄 SIEM Workflow
 
 ```text
