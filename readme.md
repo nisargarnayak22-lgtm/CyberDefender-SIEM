@@ -59,12 +59,11 @@ Update Security Dashboards
         └──────────────► System Health Dashboard
 
 ---
-
 # 📸 Dashboard Preview
 
-## 🔐 Professional Dashboard
+## 🏠 Professional Dashboard
 
-![Professional Dashboard](screenshots/dashboard.png)
+![Professional Dashboard](screenshots/professional_dashboard.png)
 
 ---
 
@@ -74,7 +73,7 @@ Update Security Dashboards
 
 ---
 
-## 👥 User Activity Report
+## 👤 User Activity Report
 
 ![User Activity Report](screenshots/user_activity_report.png)
 
@@ -86,15 +85,15 @@ Update Security Dashboards
 
 ---
 
-## 🚨 Security Incident Report
+## 🚨 Incident Report
 
-![Security Incident Report](screenshots/incident_report_dashboard.png)
+![Incident Report](screenshots/incident_report_dashboard.png)
 
 ---
 
 ## 💚 System Health Dashboard
 
-![System Health Dashboard](screenshots/system_health_dashboard.png)
+![System Health Dashboard](screenshots/dashboard_system_health_button.png)
 
 ---
 
