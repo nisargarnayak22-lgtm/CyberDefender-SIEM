@@ -28,6 +28,39 @@ CyberDefender-SIEM is a Python-based Security Information and Event Management (
 
 ---
 
+# 🔄 Assessment Workflow
+
+```text
+              Start Application
+                     │
+                     ▼
+        Collect Authentication Logs
+                     │
+                     ▼
+          Parse & Normalize Events
+                     │
+                     ▼
+       Store Events in SQLite Database
+                     │
+                     ▼
+        Detect Security Threats & Anomalies
+                     │
+                     ▼
+        Generate Real-Time Security Alerts
+                     │
+                     ▼
+         Update Interactive Dashboard
+                     │
+      ┌──────────────┼──────────────┐
+      ▼              ▼              ▼
+ Security      User Activity    Incident
+ Analytics       Monitoring     Reporting
+      │              │              │
+      └──────────────┼──────────────┘
+                     ▼
+          System Health Monitoring
+```
+
 # 🔄 SIEM Workflow
 
 ```text
