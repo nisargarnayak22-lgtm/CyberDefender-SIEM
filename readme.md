@@ -1,11 +1,10 @@
 🛡 CyberDefender-SIEM
 
-Python • Flask • SQLite • HTML • CSS • Jinja2
+Python 3.13 Flask Dashboard Database SQLite Status Completed
 
-Security Information and Event Management (SIEM) Platform for Real-Time Threat Detection & Security Monitoring
+Intelligent Security Information & Event Management Platform
 
-CyberDefender-SIEM is a lightweight Security Information and Event Management (SIEM) platform developed to collect, analyze, and monitor authentication logs through an interactive Flask dashboard. The system detects suspicious activities, generates security alerts, and provides multiple dashboards for threat investigation, user activity monitoring, and incident reporting.
-
+CyberDefender-SIEM is a Python-based Security Information and Event Management (SIEM) platform developed as a cybersecurity internship project...
 ---
 
 # ✨ Features
