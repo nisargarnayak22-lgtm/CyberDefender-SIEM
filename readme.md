@@ -1,10 +1,14 @@
-🛡 CyberDefender-SIEM
+# 🛡 CyberDefender-SIEM
 
-Python 3.13 Flask Dashboard Database SQLite Status Completed
+![Python](https://img.shields.io/badge/Python-3.13-blue?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?style=flat-square&logo=flask&logoColor=white)
+![Dashboard](https://img.shields.io/badge/Dashboard-Flask-red?style=flat-square)
+![Database](https://img.shields.io/badge/Database-SQLite-blue?style=flat-square&logo=sqlite&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square)
 
-Intelligent Security Information & Event Management Platform
+## Intelligent Security Information & Event Management Platform
 
-CyberDefender-SIEM is a Python-based Security Information and Event Management (SIEM) platform developed as a cybersecurity internship project...
+CyberDefender-SIEM is a Python-based Security Information and Event Management (SIEM) platform developed as an internship project. It collects and analyzes authentication logs, stores security events in a centralized SQLite database, detects suspicious activities such as failed login attempts and brute-force attacks, generates real-time security alerts, and presents security insights through an interactive Flask dashboard featuring security analytics, user activity monitoring, incident investigation, login timeline visualization, and system health reporting.
 ---
 
 # ✨ Features
