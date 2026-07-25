@@ -237,3 +237,7 @@ Presidency University
 GitHub
 
 https://github.com/nisargarnayak22-lgtm
+
+linkedin
+
+in/nisarga-nayak
