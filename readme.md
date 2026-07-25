@@ -29,7 +29,7 @@ CyberDefender-SIEM is a lightweight Security Information and Event Management (S
 
 ```text
 Start Application
-        │       
+        │
         ▼
 Collect Security Logs
         │
@@ -47,18 +47,15 @@ Generate Security Alerts
         │
         ▼
 Update Security Dashboards
- │
+        │
         ├──────────────► Security Analytics
-        │
         ├──────────────► Incident Reports
-        │
         ├──────────────► User Activity Monitoring
-        │
         ├──────────────► Login Timeline
-        │
         └──────────────► System Health Dashboard
-
+```
 ---
+
 # 📸 Dashboard Preview
 
 ## 🏠 Professional Dashboard
@@ -97,9 +94,9 @@ Update Security Dashboards
 
 ---
 
-###  project Architecture
+# 🏗 Project Architecture
 
-
+```text
                CyberDefender-SIEM
 
              Flask Web Dashboard
@@ -120,41 +117,41 @@ Update Security Dashboards
         └────────────┼────────────┘
                      ▼
           Security Monitoring Reports
-
+```
 ---
 
-### 📁 Project Structure
+# 📁 Project Structure
 
+```text
 CyberDefender-SIEM/
 │
-├── alerts/           Security alerts
-├── database/         SQLite database
-├── logs/             Authentication logs
-├── screenshots/      Dashboard screenshots
-├── src/              Backend source code
-├── static/           CSS & static assets
-├── templates/        HTML templates
+├── alerts/
+├── database/
+├── logs/
+├── screenshots/
+├── src/
+├── static/
+├── templates/
 │
-├── main.py           Application entry point
+├── main.py
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
 └── .gitignore
-
+```
 ---
+# 🛠 Technology Stack
 
-### 🛠 Technology Stack
- __ __ __ __ __ __ __ __ __ __ __ __ __ __
-| Component        | Technology          |
-| ---------------- | ------------------- |
-| Language         | Python 3            |
-| Backend          | Flask               |
-| Database         | SQLite              |
-| Frontend         | HTML5, CSS3, Jinja2 |
-| Threat Detection | Python              |
-| Reporting        | CSV Export          |
-| Version Control  | Git & GitHub        | 
-__ __ __ __ __ __ __ __ __ __ __ __ __ __ 
+| Component | Technology |
+|-----------|------------|
+| Language | Python 3 |
+| Backend | Flask |
+| Database | SQLite |
+| Frontend | HTML5, CSS3, Jinja2 |
+| Threat Detection | Python |
+| Reporting | CSV Export |
+| Version Control | Git & GitHub |
+
 ---
 
 ### 🚀 Getting Started
