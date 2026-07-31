@@ -267,7 +267,7 @@ Nisarga Nayak
 
 B.Tech – Computer Science & Engineering (Networks)
 
-Presidency University
+presidency university
 
 GitHub
 
@@ -275,4 +275,5 @@ https://github.com/nisargarnayak22-lgtm
 
 linkedin
 
- https://www.linkedin.com/in/Nisarga-Nayak
+ https://linkedin.com/nisarga-nayak
+ 
