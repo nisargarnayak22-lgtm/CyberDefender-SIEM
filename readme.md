@@ -13,7 +13,7 @@ CyberDefender-SIEM is a Python-based Security Information and Event Management (
 
 # ✨ Features
 
-
+- Centralized Log Collection
 - Log Parsing & Analysis
 - SQLite Database Integration
 - Brute Force Detection
