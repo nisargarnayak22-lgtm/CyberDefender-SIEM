@@ -128,7 +128,7 @@ Update Security Dashboards
 
 ## 💚 System Health Dashboard
 
-![System Health Dashboard](screenshots/dashboard_system_health_button.png)
+![System Health Dashboard](screenshots/system_health_dashboard.png)
 
 ---
 
