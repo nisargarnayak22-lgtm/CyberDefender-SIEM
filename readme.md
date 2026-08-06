@@ -98,37 +98,37 @@ Update Security Dashboards
 
 ## 🏠 Professional Dashboard
 
-![Professional Dashboard](screenshots/professional_dashboard.png)
+[Professional Dashboard](screenshots/professional_dashboard.png)
 
 ---
 
 ## 📊 Security Analytics
 
-![Security Analytics](screenshots/security_analytics_dashboard.png)
+[Security Analytics](screenshots/security_analytics_dashboard.png)
 
 ---
 
 ## 👤 User Activity Report
 
-![User Activity Report](screenshots/user_activity_report.png)
+[User Activity Report](screenshots/user_activity_report.png)
 
 ---
 
 ## 📈 Login Timeline
 
-![Login Timeline](screenshots/login_activity_timeline.png)
+[Login Timeline](screenshots/login_activity_timeline.png)
 
 ---
 
 ## 🚨 Incident Report
 
-![Incident Report](screenshots/incident_report_dashboard.png)
+[Incident Report](screenshots/incident_report_dashboard.png)
 
 ---
 
 ## 💚 System Health Dashboard
 
-![System Health Dashboard](screenshots/dashboard_system_health_button.png)
+[System Health Dashboard](screenshots/dashboard_system_health_button.png)
 
 ---
 
